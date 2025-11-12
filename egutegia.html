@@ -8,19 +8,17 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 
     <style>
-        .header {
-            text-align: center;
-            padding: 50px 0;
-        }
-
-        .header h1 {
-            font-size: 3em;
-        }
-
         .timetable {
-            margin-bottom: 50px;
+            margin-bottom: 3rem;
+        }
+
+        .timetable h3 {
+            color: #1e3c72;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
         }
 
         table {
@@ -30,14 +28,15 @@
         }
 
         th {
-            background-color: #0d6efd;
+            background: linear-gradient(145deg, #1e3c72, #2a5298);
             color: white;
-            padding: 10px;
+            padding: 0.75rem;
             border: 1px solid #ddd;
+            font-weight: 600;
         }
 
         td {
-            padding: 10px;
+            padding: 0.75rem;
             border: 1px solid #ddd;
         }
 
@@ -84,30 +83,6 @@
                 display: none;
             }
         }
-
-        .navbar {
-            background: linear-gradient(145deg, #1e3c72, #2a5298);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-        }
-
-        .navbar-brand,
-        .nav-link {
-            color: #fff !important;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: #ffd700 !important;
-        }
-
-        .navbar-toggler {
-            border-color: rgba(255, 255, 255, 0.4);
-        }
-
-        .navbar-toggler-icon {
-            filter: invert(1);
-        }
     </style>
 </head>
 
@@ -133,14 +108,17 @@
     </nav>
 
     <!-- Header -->
-    <header class="header">
-        <h1>GrADU Amaierako Lanaren Egutegia 2025/26</h1>
-    </header>
+    <div class="container">
+        <header class="header">
+            <h1>Egutegia</h1>
+            <p>Gradu Amaierako Lanaren Egutegia 2025/26</p>
+        </header>
+    </div>
 
     <!-- Timetable -->
     <div class="container">
         <div class="timetable table-responsive">
-            <h3>GrADU Amaierako Lanaren Defentsak – 2025/26 Ikasturtea</h3>
+            <h3>Gradu Amaierako Lanaren Defentsak – 2025/26 Ikasturtea</h3>
 
             <table class="table table-striped">
                 <thead>
@@ -161,7 +139,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr data-values='{"Lehen deialdia":"2025-10-16 arte","Bigarren deialdia":"2026-02-05 arte","Hirugarren deialdia":"2026-06-15 arte","Laugarren deialdia":"2026-09-01 arte"}'>
+                    <tr
+                        data-values='{"Lehen deialdia":"2025-10-16 arte","Bigarren deialdia":"2026-02-05 arte","Hirugarren deialdia":"2026-06-15 arte","Laugarren deialdia":"2026-09-01 arte"}'>
                         <td>Ikaslea: Matrikulazioa eta defentsa eskaria GAURen</td>
                         <td class="mobile-col">2025-10-16 arte</td>
                         <td class="deialdia-col">2025-10-16 arte</td>
@@ -169,7 +148,8 @@
                         <td class="deialdia-col">2026-06-15 arte</td>
                         <td class="deialdia-col">2026-09-01 arte</td>
                     </tr>
-                    <tr data-values='{"Lehen deialdia":"2025-10-26 arte","Bigarren deialdia":"2026-02-15 arte","Hirugarren deialdia":"2026-06-21 arte","Laugarren deialdia":"2026-09-09 arte"}'>
+                    <tr
+                        data-values='{"Lehen deialdia":"2025-10-26 arte","Bigarren deialdia":"2026-02-15 arte","Hirugarren deialdia":"2026-06-21 arte","Laugarren deialdia":"2026-09-09 arte"}'>
                         <td>Lana ADDI plataformara igo / Poster bidali</td>
                         <td class="mobile-col">2025-10-26 arte</td>
                         <td class="deialdia-col">2025-10-26 arte</td>
@@ -177,7 +157,8 @@
                         <td class="deialdia-col">2026-06-21 arte</td>
                         <td class="deialdia-col">2026-09-09 arte</td>
                     </tr>
-                    <tr data-values='{"Lehen deialdia":"2025-11-03 – 2025-11-07","Bigarren deialdia":"2026-02-23 – 2026-02-27","Hirugarren deialdia":"2026-06-29 – 2026-07-15","Laugarren deialdia":"2026-09-16 – 2026-09-25"}'>
+                    <tr
+                        data-values='{"Lehen deialdia":"2025-11-03 – 2025-11-07","Bigarren deialdia":"2026-02-23 – 2026-02-27","Hirugarren deialdia":"2026-06-29 – 2026-07-15","Laugarren deialdia":"2026-09-16 – 2026-09-25"}'>
                         <td>Defentsa</td>
                         <td class="mobile-col">2025-11-03 – 2025-11-07</td>
                         <td class="deialdia-col">2025-11-03 – 2025-11-07</td>
@@ -188,7 +169,8 @@
                     <tr>
                         <td colspan="6">Ikasleak ikasturtean bi deialdi baino gehiago erabili ezin izango ditu.</td>
                     </tr>
-                    <tr data-values='{"Lehen deialdia":"2025-10-17 arte","Bigarren deialdia":"2026-02-06 arte","Hirugarren deialdia":"2026-06-16 arte","Laugarren deialdia":"2026-09-02 arte"}'>
+                    <tr
+                        data-values='{"Lehen deialdia":"2025-10-17 arte","Bigarren deialdia":"2026-02-06 arte","Hirugarren deialdia":"2026-06-16 arte","Laugarren deialdia":"2026-09-02 arte"}'>
                         <td>Zuzendaria: Defentsaz informatu eta txostena GAURera igo</td>
                         <td class="mobile-col">2025-10-17 arte</td>
                         <td class="deialdia-col">2025-10-17 arte</td>
@@ -196,7 +178,8 @@
                         <td class="deialdia-col">2026-06-16 arte</td>
                         <td class="deialdia-col">2026-09-02 arte</td>
                     </tr>
-                    <tr data-values='{"Lehen deialdia":"2025-11-11","Bigarren deialdia":"2026-03-03","Hirugarren deialdia":"2026-07-17","Laugarren deialdia":"2026-09-29"}'>
+                    <tr
+                        data-values='{"Lehen deialdia":"2025-11-11","Bigarren deialdia":"2026-03-03","Hirugarren deialdia":"2026-07-17","Laugarren deialdia":"2026-09-29"}'>
                         <td>Ebaluazio Batzordea: Notak jakinarazi eta acta bidali dif.gral@ehu.eus helbidera</td>
                         <td class="mobile-col">2025-11-11</td>
                         <td class="deialdia-col">2025-11-11</td>
@@ -224,6 +207,11 @@
             });
         });
     </script>
+
+    <!-- Return to Home Button -->
+    <div class="container text-center mb-5">
+        <a href="index.html" class="btn btn-primary btn-lg px-4">Hasierara itzuli</a>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>

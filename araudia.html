@@ -4,10 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Araudia</title>
+  <title>Araudia - GrAL info</title>
+  <meta name="description" content="Gradu Amaierako Lanaren arautegia - araudi osoa eta laburtua">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="styles.css">
 
   <style>
@@ -88,26 +90,47 @@
         font-size: 2em;
       }
     }
+
+    /* Back to Top Button */
+    #backToTop {
+      position: fixed;
+      bottom: 80px;
+      right: 30px;
+      z-index: 99;
+      display: none;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    #backToTop:hover {
+      transform: translateY(-5px);
+    }
   </style>
 </head>
 
 <body>
 
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg" role="navigation" aria-label="Main navigation">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">GrAL info</a>
+      <a class="navbar-brand" href="index.html" aria-label="GrAL info - Home">
+        <i class="bi bi-mortarboard-fill me-2"></i>GrAL info
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Hasiera</a></li>
-          <li class="nav-item"><a class="nav-link active" href="araudia.html">Araudia</a></li>
-          <li class="nav-item"><a class="nav-link" href="egutegia.html">Egutegia</a></li>
-          <li class="nav-item"><a class="nav-link" href="galdetegia.html">Galdetegia</a></li>
-          <li class="nav-item"><a class="nav-link" href="memoriak.html">Memoriak</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-fill me-1"></i>Hasiera</a>
+          </li>
+          <li class="nav-item"><a class="nav-link active" href="araudia.html" aria-current="page"><i
+                class="bi bi-file-text me-1"></i>Araudia</a></li>
+          <li class="nav-item"><a class="nav-link" href="egutegia.html"><i
+                class="bi bi-calendar-event me-1"></i>Egutegia</a></li>
+          <li class="nav-item"><a class="nav-link" href="galdetegia.html"><i
+                class="bi bi-question-circle me-1"></i>Galdetegia</a></li>
+          <li class="nav-item"><a class="nav-link" href="memoriak.html"><i class="bi bi-archive me-1"></i>Memoriak</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -115,26 +138,39 @@
 
   <!-- Header (clickable) -->
   <div class="container">
-    <header class="header" onclick="goBack()">
+    <header class="header" onclick="goBack()" role="banner" tabindex="0" onkeypress="if(event.key==='Enter') goBack()"
+      aria-label="Klikatu hasierara itzultzeko">
       <h1>Araudia</h1>
       <p>Gradu Amaierako Lanaren arautegia</p>
     </header>
   </div>
 
   <!-- Main Container -->
-  <main class="container text-center" id="main-content">
+  <main class="container text-center" id="main-content" role="main">
     <!-- Default View -->
     <div id="default-view">
-      <button class="btn btn-primary btn-lg btn-toggle m-2" onclick="showSection('osoa')">Araudi Osoa</button>
-      <button class="btn btn-primary btn-lg btn-toggle m-2" onclick="showSection('laburtua')">Araudi Laburtua</button>
+      <button class="btn btn-primary btn-lg btn-toggle m-2" onclick="showSection('osoa')"
+        aria-label="Ikusi araudi osoa">
+        <i class="bi bi-file-earmark-text me-2"></i>Araudi Osoa
+      </button>
+      <button class="btn btn-primary btn-lg btn-toggle m-2" onclick="showSection('laburtua')"
+        aria-label="Ikusi araudi laburtua">
+        <i class="bi bi-file-earmark-text me-2"></i>Araudi Laburtua
+      </button>
 
       <div class="extra-links">
-        <a href="https://www.ehu.eus/documents/d/graduak/gral" target="_blank">GrAL egin eta defendatzeari buruzkoa
-          arautegia</a>
-        <a href="https://www.ehu.eus/documents/d/informatika-fakultatea/normativa_aag_eu" target="_blank">GrAL araudia
-          AA</a>
-        <a href="https://www.ehu.eus/documents/d/informatika-fakultatea/normativa_iig_eu" target="_blank">GrAL araudia
-          II</a>
+        <a href="https://www.ehu.eus/documents/d/graduak/gral" target="_blank" rel="noopener noreferrer"
+          aria-label="Irakurri GrAL egin eta defendatzeari buruzkoa arautegia">
+          <i class="bi bi-link-45deg me-2"></i>GrAL egin eta defendatzeari buruzkoa arautegia
+        </a>
+        <a href="https://www.ehu.eus/documents/d/informatika-fakultatea/normativa_aag_eu" target="_blank"
+          rel="noopener noreferrer" aria-label="Irakurri GrAL araudia AA">
+          <i class="bi bi-link-45deg me-2"></i>GrAL araudia AA
+        </a>
+        <a href="https://www.ehu.eus/documents/d/informatika-fakultatea/normativa_iig_eu" target="_blank"
+          rel="noopener noreferrer" aria-label="Irakurri GrAL araudia II">
+          <i class="bi bi-link-45deg me-2"></i>GrAL araudia II
+        </a>
       </div>
     </div>
 
@@ -171,31 +207,90 @@
         <div class="fade-overlay"></div>
       </div>
 
-      <button id="moreBtn" class="btn btn-primary btn-more mt-3" onclick="toggleMore()">Ikusi gehiago</button>
-      <button class="btn btn-primary btn-back mt-3 ms-2" onclick="goBack()">Itzuli atzera</button>
+      <button id="moreBtn" class="btn btn-primary btn-more mt-3" onclick="toggleMore()"
+        aria-label="Ikusi gehiago edo gutxiago">
+        <i class="bi bi-chevron-down me-2"></i>Ikusi gehiago
+      </button>
+      <button class="btn btn-primary btn-back mt-3 ms-2" onclick="goBack()" aria-label="Itzuli hasierara">
+        <i class="bi bi-arrow-left me-2"></i>Itzuli atzera
+      </button>
     </div>
 
     <!-- Araudi Laburtua -->
     <div id="laburtua" class="section">
       <h2>Araudi Laburtua</h2>
-      <p>
-        Hemen araudiaren bertsio laburra agertzen da. Testu honek puntu nagusiak laburbiltzen ditu.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel feugiat lacus. Donec sed ligula vel nisl
-        interdum fermentum non ut erat.
-      </p>
-      <button class="btn btn-primary btn-back mt-3" onclick="goBack()">Itzuli atzera</button>
+
+      <div class="text-start">
+        <h3 class="h5 text-primary mt-4"><i class="bi bi-1-circle me-2"></i>Kredituak eta Helburua</h3>
+        <p>
+          Gradu Amaierako Lanak <strong>12 kreditu</strong> ditu eta ikaslearen prestakuntza eta gaitasun profesionalak
+          erakusteko balio du.
+          Lan akademiko bat da, graduko ikasketan zehar ikasitako gaitasunak aplikatuz egiten dena.
+        </p>
+
+        <h3 class="h5 text-primary mt-4"><i class="bi bi-2-circle me-2"></i>Matrikulazio Baldintzak</h3>
+        <p>
+          GrAL matrikulatzeko, ikasleak <strong>graduaren kreditu guztiak</strong> gaindituak izan behar ditu edo
+          matrikulatuak, GrALaren 12 kredituak izan ezik.
+          Eskaera ikasturteko <strong>lehen 8 asteetan</strong> aurkeztu behar da.
+        </p>
+
+        <h3 class="h5 text-primary mt-4"><i class="bi bi-3-circle me-2"></i>Zuzendaritza</h3>
+        <p>
+          Lana <strong>tituluari lotutako irakasle edo ikertzaile batek</strong> zuzendu behar du. Zuzendariak ikasleari
+          orientazioa eta jarraipena emango dio lan osoan zehar.
+        </p>
+
+        <h3 class="h5 text-primary mt-4"><i class="bi bi-4-circle me-2"></i>Deialdirak eta Epeak</h3>
+        <p>
+          Ikasturte bakoitzean <strong>4 deialditara</strong> aurkeztu daiteke GrAL. Dokumentuak (memoria idatzia eta
+          aurkezpena) epean aurkeztu behar dira GAUR plataforman.
+        </p>
+
+        <h3 class="h5 text-primary mt-4"><i class="bi bi-5-circle me-2"></i>Ebaluazioa</h3>
+        <p>
+          <strong>3 pertsonako batzorde</strong> batek ebaluatuko du lana, zuzendaria barne.
+          Defentsa publikoa da eta ikasleak <strong>15-20 minutu</strong> ditu bere lana aurkezteko. Ondoren, batzordeak
+          galderak egin ditzake.
+        </p>
+
+        <h3 class="h5 text-primary mt-4"><i class="bi bi-6-circle me-2"></i>Argitalpena</h3>
+        <p>
+          Defendatutako lan guztiak <strong>ADDI biltegian</strong> argitaratuko dira, ezabatze eskubidearekin.
+          Horrela, etorkizuneko ikasleek kontsultatu ahal izango dituzte.
+        </p>
+
+        <div class="alert alert-info mt-4" role="alert">
+          <i class="bi bi-info-circle me-2"></i>
+          <strong>Oharra:</strong> Informazio gehiago nahi baduzu, kontsultatu araudi osoa edo jarri harremanetan zure
+          fakultateko arduradunarekin.
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-back mt-3" onclick="goBack()" aria-label="Itzuli hasierara">
+        <i class="bi bi-arrow-left me-2"></i>Itzuli atzera
+      </button>
     </div>
   </main>
 
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="btn btn-primary btn-lg rounded-circle" onclick="scrollToTop()" aria-label="Joan gorantz"
+    title="Joan gorantz">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
   <!-- Return to Home Button -->
   <div class="container text-center mb-5">
-    <a href="index.html" class="btn btn-primary btn-lg px-4">Hasierara itzuli</a>
+    <a href="index.html" class="btn btn-primary btn-lg px-4" aria-label="Itzuli hasierako orrira">
+      <i class="bi bi-house me-2"></i>Hasierara itzuli
+    </a>
   </div>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
+    // Show section functionality
     function showSection(id) {
       document.getElementById("default-view").style.display = "none";
       document.querySelectorAll(".section").forEach(sec => sec.style.display = "none");
@@ -203,12 +298,14 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+    // Go back to default view
     function goBack() {
       document.querySelectorAll(".section").forEach(sec => sec.style.display = "none");
       document.getElementById("default-view").style.display = "block";
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+    // Toggle expanded text
     function toggleMore() {
       const container = document.getElementById('text-container');
       const btn = document.getElementById('moreBtn');
@@ -218,13 +315,28 @@
         container.classList.remove('expanded');
         container.style.maxHeight = '300px';
         overlay.style.display = 'block';
-        btn.textContent = 'Ikusi gehiago';
+        btn.innerHTML = '<i class="bi bi-chevron-down me-2"></i>Ikusi gehiago';
       } else {
         container.classList.add('expanded');
         container.style.maxHeight = 'none';
         overlay.style.display = 'none';
-        btn.textContent = 'Ikusi gutxiago';
+        btn.innerHTML = '<i class="bi bi-chevron-up me-2"></i>Ikusi gutxiago';
       }
+    }
+
+    // Back to top functionality
+    const backToTopBtn = document.getElementById('backToTop');
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
 

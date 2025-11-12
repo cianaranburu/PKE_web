@@ -4,10 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galdetegia</title>
+  <title>Galdetegia - GrAL info</title>
+  <meta name="description" content="Ebaluatu zure ezagutza Gradu Amaierako Lanari buruz">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="styles.css">
 
   <style>
@@ -66,25 +68,64 @@
     .incorrect {
       color: red;
     }
+
+    /* Unanswered question indicator */
+    .question.unanswered {
+      border-left: 4px solid #ffc107;
+      animation: shake 0.3s;
+    }
+
+    @keyframes shake {
+
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      25% {
+        transform: translateX(-5px);
+      }
+
+      75% {
+        transform: translateX(5px);
+      }
+    }
+
+    /* Progress indicator */
+    .progress-indicator {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: white;
+      padding: 1rem 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
   </style>
 </head>
 
 <body>
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg" role="navigation" aria-label="Main navigation">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">GrAL info</a>
+      <a class="navbar-brand" href="index.html" aria-label="GrAL info - Home">
+        <i class="bi bi-mortarboard-fill me-2"></i>GrAL info
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Hasiera</a></li>
-          <li class="nav-item"><a class="nav-link" href="araudia.html">Araudia</a></li>
-          <li class="nav-item"><a class="nav-link" href="egutegia.html">Egutegia</a></li>
-          <li class="nav-item"><a class="nav-link active" href="galdetegia.html">Galdetegia</a></li>
-          <li class="nav-item"><a class="nav-link" href="memoriak.html">Memoriak</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-fill me-1"></i>Hasiera</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="araudia.html"><i class="bi bi-file-text me-1"></i>Araudia</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="egutegia.html"><i
+                class="bi bi-calendar-event me-1"></i>Egutegia</a></li>
+          <li class="nav-item"><a class="nav-link active" href="galdetegia.html" aria-current="page"><i
+                class="bi bi-question-circle me-1"></i>Galdetegia</a></li>
+          <li class="nav-item"><a class="nav-link" href="memoriak.html"><i class="bi bi-archive me-1"></i>Memoriak</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -92,19 +133,33 @@
 
   <!-- Header -->
   <div class="container">
-    <header class="header">
+    <header class="header" role="banner">
       <h1>Galdetegia</h1>
       <p>Aukeratu erantzun zuzena galdera bakoitzeko</p>
     </header>
   </div>
 
+  <!-- Progress Indicator -->
+  <div class="progress-indicator">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <span id="progressText" class="fw-bold"><i class="bi bi-list-check me-2"></i>Erantzunak: <span
+            id="answered">0</span>/10</span>
+        <div class="progress flex-grow-1 mx-3" style="height: 20px;">
+          <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0"
+            aria-valuemin="0" aria-valuemax="100">0%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Result Display -->
   <div class="container">
-    <div id="result" class="alert alert-info text-center" style="display:none;"></div>
+    <div id="result" class="alert alert-info text-center" style="display:none;" role="alert"></div>
   </div>
 
   <!-- Quiz Form -->
-  <div class="container">
+  <main class="container" role="main">
     <form id="quizForm">
       <!-- 10 Questions based on GrADU PDF -->
       <div class="question">
@@ -189,11 +244,17 @@
 
       <!-- Buttons -->
       <div class="d-flex gap-2 justify-content-center mb-4">
-        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-        <button type="reset" class="btn btn-secondary btn-lg" onclick="resetQuiz()">Clear</button>
+        <button type="submit" id="submitBtn" class="btn btn-primary btn-lg" disabled
+          aria-label="Bidali galdetegiko erantzunak">
+          <i class="bi bi-check-circle me-2"></i>Bidali
+        </button>
+        <button type="reset" class="btn btn-secondary btn-lg" onclick="confirmReset()"
+          aria-label="Garbitu galdetegiko erantzunak">
+          <i class="bi bi-x-circle me-2"></i>Garbitu
+        </button>
       </div>
     </form>
-  </div>
+  </main>
 
   <!-- Return to Home Button -->
   <div class="container text-center mb-5">
@@ -206,6 +267,9 @@
   <script>
     const form = document.getElementById('quizForm');
     const resultBox = document.getElementById('result');
+    const submitBtn = document.getElementById('submitBtn');
+    const progressBar = document.getElementById('progressBar');
+    const answeredCount = document.getElementById('answered');
 
     // Correct answers: 1=c(12), 2=c(biak), 3=b(8asteak), 4=c(4deialdiak), 5=b(lotutakoa), 
     // 6=b(memoriaetaaur), 7=b(3), 8=b(15-20), 9=c(biak), 10=a(ADDI)
@@ -222,8 +286,60 @@
       q10: 'a'
     };
 
+    // Track progress
+    function updateProgress() {
+      let answered = 0;
+      for (let i = 1; i <= 10; i++) {
+        const selected = form.querySelector(`input[name="q${i}"]:checked`);
+        if (selected) answered++;
+      }
+
+      answeredCount.textContent = answered;
+      const percentage = (answered / 10) * 100;
+      progressBar.style.width = percentage + '%';
+      progressBar.setAttribute('aria-valuenow', percentage);
+      progressBar.textContent = Math.round(percentage) + '%';
+
+      // Enable submit button only when all questions are answered
+      submitBtn.disabled = answered < 10;
+
+      if (answered === 10) {
+        progressBar.classList.add('bg-success');
+      } else {
+        progressBar.classList.remove('bg-success');
+      }
+    }
+
+    // Add event listeners to all radio buttons
+    const radios = form.querySelectorAll('input[type=radio]');
+    radios.forEach(radio => {
+      radio.addEventListener('change', updateProgress);
+    });
+
+    // Form submission
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+
+      // Check if all questions are answered
+      let allAnswered = true;
+      for (let i = 1; i <= 10; i++) {
+        const selected = form.querySelector(`input[name="q${i}"]:checked`);
+        const questionDiv = form.querySelector(`input[name="q${i}"]`).closest('.question');
+
+        if (!selected) {
+          allAnswered = false;
+          questionDiv.classList.add('unanswered');
+          setTimeout(() => questionDiv.classList.remove('unanswered'), 300);
+        }
+      }
+
+      if (!allAnswered) {
+        resultBox.style.display = 'block';
+        resultBox.className = 'alert alert-warning text-center';
+        resultBox.innerHTML = '<i class="bi bi-exclamation-triangle me-2"></i><strong>Oharra:</strong> Mesedez, erantzun galdera guztiak aurretik.';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
 
       let score = 0;
       const total = 10;
@@ -235,11 +351,11 @@
 
         if (selected && selected.value === correctAnswers[`q${i}`]) {
           score++;
-          res.innerHTML = '✓ Zuzena';
+          res.innerHTML = '<i class="bi bi-check-circle me-1"></i>Zuzena';
           res.classList.remove('incorrect');
           res.classList.add('correct');
         } else {
-          res.innerHTML = '✗ Okerra';
+          res.innerHTML = '<i class="bi bi-x-circle me-1"></i>Okerra (Zuzena: ' + getCorrectAnswerText(i, correctAnswers[`q${i}`]) + ')';
           res.classList.remove('correct');
           res.classList.add('incorrect');
         }
@@ -247,24 +363,39 @@
 
       // Show score
       resultBox.style.display = 'block';
-      resultBox.classList.remove('alert-info');
+      resultBox.classList.remove('alert-info', 'alert-warning');
 
       if (score >= 7) {
-        resultBox.classList.add('alert-success');
-        resultBox.innerHTML = `<strong>Emaitza:</strong> ${score} / ${total} zuzen. Oso ondo!`;
+        resultBox.className = 'alert alert-success text-center';
+        resultBox.innerHTML = `<i class="bi bi-trophy-fill me-2"></i><strong>Emaitza:</strong> ${score} / ${total} zuzen. Oso ondo!`;
       } else if (score >= 5) {
-        resultBox.classList.add('alert-warning');
-        resultBox.innerHTML = `<strong>Emaitza:</strong> ${score} / ${total} zuzen. Ondo, baina hobetu daiteke!`;
+        resultBox.className = 'alert alert-warning text-center';
+        resultBox.innerHTML = `<i class="bi bi-emoji-smile me-2"></i><strong>Emaitza:</strong> ${score} / ${total} zuzen. Ondo, baina hobetu daiteke!`;
       } else {
-        resultBox.classList.add('alert-danger');
-        resultBox.innerHTML = `<strong>Emaitza:</strong> ${score} / ${total} zuzen. Gehiago landu behar duzu!`;
+        resultBox.className = 'alert alert-danger text-center';
+        resultBox.innerHTML = `<i class="bi bi-emoji-frown me-2"></i><strong>Emaitza:</strong> ${score} / ${total} zuzen. Gehiago landu behar duzu!`;
       }
 
-      // Disable all radio buttons after submit
-      const radios = form.querySelectorAll('input[type=radio]');
+      // Disable all radio buttons and submit button after submit
       radios.forEach(r => r.disabled = true);
+      submitBtn.disabled = true;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
+    // Get correct answer text
+    function getCorrectAnswerText(questionNum, answerValue) {
+      const input = form.querySelector(`input[name="q${questionNum}"][value="${answerValue}"]`);
+      return input ? input.parentElement.textContent.trim().substring(0, 30) + '...' : '';
+    }
+
+    // Confirm reset with user
+    function confirmReset() {
+      if (confirm('Ziur zaude erantzun guztiak garbitu nahi dituzula?')) {
+        resetQuiz();
+      }
+    }
+
+    // Reset quiz function
     function resetQuiz() {
       resultBox.style.display = 'none';
       resultBox.classList.remove('alert-success', 'alert-warning', 'alert-danger');
@@ -275,9 +406,14 @@
         res.classList.remove('incorrect', 'correct');
       }
 
-      const radios = form.querySelectorAll('input[type=radio]');
       radios.forEach(r => r.disabled = false);
+      submitBtn.disabled = true;
+      updateProgress();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    // Initialize progress on page load
+    updateProgress();
   </script>
 
 </body>

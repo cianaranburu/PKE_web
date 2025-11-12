@@ -6,9 +6,11 @@
     --accent-gold: #ffd700;
     --bg-light: #f5f7fa;
     --text-dark: #1e3c72;
+    --text-light: #666;
     --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.15);
     --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.2);
     --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.3);
+    --border-radius: 15px;
 }
 
 body {
@@ -16,6 +18,38 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    color: var(--text-dark);
+}
+
+/* ===== ACCESSIBILITY ENHANCEMENTS ===== */
+/* Enhanced focus states for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--accent-gold) !important;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.3);
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Smooth scrolling for users who don't have reduced motion preference */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
 }
 
 /* Bootstrap Navbar Customization */
@@ -180,4 +214,88 @@ footer p {
 
 .bg-primary-custom {
     background: linear-gradient(145deg, var(--primary-dark), var(--primary-light)) !important;
+}
+
+/* ===== ADDITIONAL STYLING IMPROVEMENTS ===== */
+
+/* Improve link hover states globally */
+a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Add subtle animation to icons */
+i.bi {
+    transition: transform 0.3s ease;
+}
+
+/* Improve spacing consistency */
+.container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+/* Add shadow to images if any are added later */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+/* Improve navbar brand hover effect */
+.navbar-brand:hover i {
+    transform: rotate(15deg);
+}
+
+/* Add pulse animation for important elements */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Selection color customization */
+::selection {
+    background-color: var(--accent-gold);
+    color: var(--primary-dark);
+}
+
+::-moz-selection {
+    background-color: var(--accent-gold);
+    color: var(--primary-dark);
+}
+
+/* Scrollbar styling for webkit browsers */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(145deg, var(--primary-dark), var(--primary-light));
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-light);
 }

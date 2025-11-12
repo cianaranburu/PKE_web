@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Memoriak</title>
+  <title>Memoriak - GrAL info</title>
+  <meta name="description" content="Aurreko ikasleen Gradu Amaierako Lanen adibideak">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -93,20 +94,27 @@
 <body>
 
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg" role="navigation" aria-label="Main navigation">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">GrAL info</a>
+      <a class="navbar-brand" href="index.html" aria-label="GrAL info - Home">
+        <i class="bi bi-mortarboard-fill me-2"></i>GrAL info
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Hasiera</a></li>
-          <li class="nav-item"><a class="nav-link" href="araudia.html">Araudia</a></li>
-          <li class="nav-item"><a class="nav-link" href="egutegia.html">Egutegia</a></li>
-          <li class="nav-item"><a class="nav-link" href="galdetegia.html">Galdetegia</a></li>
-          <li class="nav-item"><a class="nav-link" href="memoriak.html">Memoriak</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-fill me-1"></i>Hasiera</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="araudia.html"><i class="bi bi-file-text me-1"></i>Araudia</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="egutegia.html"><i
+                class="bi bi-calendar-event me-1"></i>Egutegia</a></li>
+          <li class="nav-item"><a class="nav-link" href="galdetegia.html"><i
+                class="bi bi-question-circle me-1"></i>Galdetegia</a></li>
+          <li class="nav-item"><a class="nav-link active" href="memoriak.html" aria-current="page"><i
+                class="bi bi-archive me-1"></i>Memoriak</a></li>
         </ul>
       </div>
     </div>
@@ -114,14 +122,14 @@
 
   <!-- Header -->
   <div class="container">
-    <header class="header">
+    <header class="header" role="banner">
       <h1>Memoriak</h1>
       <p>Aurreko ikasleen Gradu Amaierako Lanen adibideak</p>
     </header>
   </div>
 
   <!-- Main Content (4 Boxes) -->
-  <div class="container">
+  <main class="container" role="main">
     <div class="row justify-content-center g-4">
 
       <!-- Software Engineering -->
@@ -150,7 +158,8 @@
           <div class="icon"><i class="bi bi-calculator"></i></div>
           <h4>Computation</h4>
           <p>Dive into algorithms, numerical methods, and computing theory.</p>
-          <a href="https://addi.ehu.es/handle/10810/13138" class="btn btn-view mt-3">View</a>
+          <a href="https://addi.ehu.es/handle/10810/13138" target="_blank" rel="noopener noreferrer"
+            class="btn btn-view mt-3" aria-label="Ikusi Computation proiektuak">View</a>
         </div>
       </div>
 
@@ -160,17 +169,20 @@
           <div class="icon"><i class="bi bi-robot"></i></div>
           <h4>Artificial Intelligence</h4>
           <p>Explore machine learning, neural networks, and AI applications.</p>
-          <a href="https://addi.ehu.es/handle/10810/73965" class="btn btn-view mt-3">View</a>
+          <a href="https://addi.ehu.es/handle/10810/73965" target="_blank" rel="noopener noreferrer"
+            class="btn btn-view mt-3" aria-label="Ikusi AI proiektuak">View</a>
         </div>
       </div>
 
     </div>
-  </div>
+  </main>
 
   <!-- Bootstrap JS -->
   <!-- Return to Home Button -->
   <div class="container text-center mb-5">
-    <a href="index.html" class="btn btn-primary btn-lg px-4">Hasierara itzuli</a>
+    <a href="index.html" class="btn btn-primary btn-lg px-4" aria-label="Itzuli hasierako orrira">
+      <i class="bi bi-house me-2"></i>Hasierara itzuli
+    </a>
   </div>
 
   <!-- Scripts -->

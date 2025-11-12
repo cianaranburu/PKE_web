@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galdetegia</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #f5f7fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(145deg, #1e3c72, #2a5298);
+      color: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 3em;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 1.2em;
+      font-weight: 500;
+    }
+
+    /* ===== QUESTION BOX ===== */
+    .question {
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      background: linear-gradient(145deg, #e8f0ff, #f4f7ff);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .question label {
+      font-weight: 500;
+      font-size: 1.1em;
+      color: #1e3c72;
+    }
+
+    /* ===== RADIO BUTTONS ===== */
+    input[type="radio"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border: 2px solid #2a5298;
+      border-radius: 50%;
+      position: relative;
+      cursor: pointer;
+      outline: none;
+      margin-right: 10px;
+      transition: all 0.3s;
+      vertical-align: middle;
+      background: white;
+    }
+
+    input[type="radio"]:checked::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #1e3c72, #2a5298);
+    }
+
+    .result-label {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .correct {
+      color: green;
+    }
+
+    .incorrect {
+      color: red;
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn-group .btn {
+      padding: 6px 12px;
+      font-size: 0.9em;
+      border-radius: 8px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(145deg, #1e3c72, #2a5298);
+      border: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(145deg, #274b8e, #142b61);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background-color: #adb5bd;
+      border: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: #8d99a6;
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2em;
+      }
+
+      .header p {
+        font-size: 1em;
+      }
+    }
+
+    /* ===== NAVBAR (DARK BLUE GRADIENT) ===== */
+    .navbar {
+      background: linear-gradient(145deg, #1e3c72, #2a5298);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #ffd700 !important;
+    }
+
+    .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .navbar-toggler-icon {
+      filter: invert(1);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">GrAL info</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Hasiera</a></li>
+          <li class="nav-item"><a class="nav-link" href="araudia.html">Araudia</a></li>
+          <li class="nav-item"><a class="nav-link" href="egutegia.html">Egutegia</a></li>
+          <li class="nav-item"><a class="nav-link active" href="galdetegia.html">Galdetegia</a></li>
+          <li class="nav-item"><a class="nav-link" href="memoriak.html">Memoriak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>Galdetegia (Quiz)</h1>
+    <p>Choose one answer per question and submit your responses.</p>
+  </header>
+
+  <!-- Result Display -->
+  <div class="container">
+    <div id="result" class="alert alert-info text-center" style="display:none;"></div>
+  </div>
+
+  <!-- Quiz Form -->
+  <div class="container">
+    <form id="quizForm">
+      <!-- 10 Questions -->
+      <div class="question">
+        <label>1. What is 2 + 2?</label><br>
+        <div><input type="radio" name="q1" value="a"> 3</div>
+        <div><input type="radio" name="q1" value="b"> 4</div>
+        <div><input type="radio" name="q1" value="c"> 5</div>
+        <div id="res1" class="result-label"></div>
+      </div>
+
+      <div class="question">
+        <label>2. What color is the sky on a clear day?</label><br>
+        <div><input type="radio" name="q2" value="a"> Red</div>
+        <div><input type="radio" name="q2" value="b"> Blue</div>
+        <div><input type="radio" name="q2" value="c"> Green</div>
+        <div id="res2" class="result-label"></div>
+      </div>
+
+      <div class="question">
+        <label>3. What is the capital of France?</label><br>
+        <div><input type="radio" name="q3" value="a"> Paris</div>
+        <div><input type="radio" name="q3" value="b"> Madrid</div>
+        <div><input type="radio" name="q3" value="c"> Rome</div>
+        <div id="res3" class="result-label"></div>
+      </div>
+
+      <div class="question">
+        <label>4. Which planet is known as the Red Planet?</label><br>
+        <div><input type="radio" name="q4" value="a"> Mars</div>
+        <div><input type="radio" name="q4" value="b"> Venus</div>
+        <div><input type="radio" name="q4" value="c"> Jupiter</div>
+        <div id="res4" class="result-label"></div>
+      </div>
+
+      <div class="question">
+        <label>5. What language do people speak in Spain?</label><br>
+        <div><input type="radio" name="q5" value="a"> English</div>
+        <div><input type="radio" name="q5" value="b"> Spanish</div>
+        <div><input type="radio" name="q5" value="c"> French</div>
+        <div id="res5" class="result-label"></div>
+      </div>
+
+      <div class="question">
+        <label>6. What is the boiling point of water (°C)?</label><br>
+        <div><input type="radio" name="q6" value="a"> 50</div>
+        <div><input type="radio" name="q6" value="b"> 100</div>
+        <div><input type="radio" name="q6" value="c"> 150</div>
+        <div id="res6" class="result-label"></div>
+      </div>
+
+      <div class="question">
+        <label>7. How many days are in a week?</label><br>
+        <div><input type="radio" name="q7" value="a"> 5</div>
+        <div><input type="radio" name="q7" value="b"> 7</div>
+        <div><input type="radio" name="q7" value="c"> 10</div>
+        <div id="res7" class="result-label"></div>
+      </div>
+
+      <div class="question">
+        <label>8. What comes after Monday?</label><br>
+        <div><input type="radio" name="q8" value="a"> Tuesday</div>
+        <div><input type="radio" name="q8" value="b"> Wednesday</div>
+        <div><input type="radio" name="q8" value="c"> Friday</div>
+        <div id="res8" class="result-label"></div>
+      </div>
+
+      <div class="question">
+        <label>9. What is the color of grass?</label><br>
+        <div><input type="radio" name="q9" value="a"> Green</div>
+        <div><input type="radio" name="q9" value="b"> Yellow</div>
+        <div><input type="radio" name="q9" value="c"> Red</div>
+        <div id="res9" class="result-label"></div>
+      </div>
+
+      <div class="question">
+        <label>10. What year is it currently?</label><br>
+        <div><input type="radio" name="q10" value="a"> 2024</div>
+        <div><input type="radio" name="q10" value="b"> 2025</div>
+        <div><input type="radio" name="q10" value="c"> 2026</div>
+        <div id="res10" class="result-label"></div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="btn-group mb-4">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-secondary" onclick="resetQuiz()">Clear</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const form = document.getElementById('quizForm');
+    const resultBox = document.getElementById('result');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Show score (always 0 for now)
+      resultBox.style.display = 'block';
+      resultBox.classList.remove('alert-info');
+      resultBox.classList.add('alert-success');
+      resultBox.innerHTML = `<strong>Result:</strong> You got 0 out of 10 correct.`;
+
+      // Mark all questions as incorrect
+      for (let i = 1; i <= 10; i++) {
+        const res = document.getElementById(`res${i}`);
+        res.innerHTML = '❌ Incorrect';
+        res.classList.add('incorrect');
+      }
+
+      // Disable all radio buttons after submit
+      const radios = form.querySelectorAll('input[type=radio]');
+      radios.forEach(r => r.disabled = true);
+    });
+
+    function resetQuiz() {
+      resultBox.style.display = 'none';
+      for (let i = 1; i <= 10; i++) {
+        const res = document.getElementById(`res${i}`);
+        res.innerHTML = '';
+        res.classList.remove('incorrect');
+      }
+      const radios = form.querySelectorAll('input[type=radio]');
+      radios.forEach(r => r.disabled = false);
+    }
+  </script>
+
+</body>
+
+</html>

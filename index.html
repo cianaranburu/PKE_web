@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrAL informazioa | Donostiako Informatika Fakultatea</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    /* ===== GENERAL STYLE ===== */
+    body {
+      background: #f5f7fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      background: linear-gradient(145deg, #1e3c72, #2a5298);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .navbar-brand, .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #ffd700 !important;
+    }
+
+    .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      text-align: center;
+      padding: 60px 0 40px;
+    }
+
+    .header h1 {
+      font-size: 3em;
+      color: #1e3c72;
+      font-weight: 700;
+    }
+
+    .header h4 {
+      color: #444;
+      font-weight: 500;
+    }
+
+    /* ===== BOXES ===== */
+    .box {
+      padding: 30px;
+      margin: 15px;
+      text-align: center;
+      border-radius: 15px;
+      color: #fff;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      transform: skewY(-20deg);
+      pointer-events: none;
+    }
+
+    .box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.4);
+    }
+
+    .icon {
+      font-size: 3em;
+      margin-bottom: 15px;
+    }
+
+    /* ===== DARKER GRADIENTS ===== */
+    .box-arau {
+      background: linear-gradient(145deg, #274b8e, #142b61);
+    }
+
+    .box-egut {
+      background: linear-gradient(145deg, #5a2a82, #34185a); /* deep purple */
+    }
+
+    .box-memo {
+      background: linear-gradient(145deg, #238c4c, #12562d);
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">GrAL info</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Hasiera</a></li>
+          <li class="nav-item"><a class="nav-link" href="araudia.html">Araudia</a></li>
+          <li class="nav-item"><a class="nav-link" href="egutegia.html">Egutegia</a></li>
+          <li class="nav-item"><a class="nav-link" href="galdetegia.html">Galdetegia</a></li>
+          <li class="nav-item"><a class="nav-link" href="memoriak.html">Memoriak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>GRADU AMAIERAKO LANA</h1>
+    <h4>DONOSTIAKO INFORMATIKA FAKULTATEA</h4>
+  </header>
+
+  <!-- Main Content (3 Boxes) -->
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <!-- Araudia -->
+      <div class="col-md-6 col-lg-4">
+        <div class="box box-arau">
+          <div class="icon"><i class="bi bi-file-earmark-text"></i></div>
+          <h4>Araudia</h4>
+          <p>Azken araudia eta dokumentu ofizialak</p>
+          <a href="araudia.html" class="btn btn-light mt-3">IKUSI</a>
+        </div>
+      </div>
+
+      <!-- Egutegia (now purple) -->
+      <div class="col-md-6 col-lg-4">
+        <div class="box box-egut">
+          <div class="icon"><i class="bi bi-calendar-event"></i></div>
+          <h4>Egutegia</h4>
+          <p>Epeak, matrikulak eta defentsa datuak</p>
+          <a href="egutegia.html" class="btn btn-light mt-3">IKUSI</a>
+        </div>
+      </div>
+
+      <!-- Memoriak -->
+      <div class="col-md-6 col-lg-4">
+        <div class="box box-memo">
+          <div class="icon"><i class="bi bi-folder-fill"></i></div>
+          <h4>Memoriak</h4>
+          <p>Aurreko GrAL memoriak</p>
+          <a href="memoriak.html" class="btn btn-light mt-3">IKUSI</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

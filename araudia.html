@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="eu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Araudia</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #f5f7fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .header {
+      text-align: center;
+      padding: 50px 0 30px;
+      cursor: pointer;
+    }
+
+    .header h1 {
+      font-size: 3em;
+      color: #1e3c72;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .header h1:hover {
+      color: #2a5298;
+      transform: scale(1.03);
+    }
+
+    /* ===== NAVBAR (Dark Blue Gradient) ===== */
+    .navbar {
+      background: linear-gradient(145deg, #1e3c72, #2a5298);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #ffd700 !important;
+    }
+
+    .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .navbar-toggler-icon {
+      filter: invert(1);
+    }
+
+    /* ===== Buttons (Unified Style) ===== */
+    .btn-toggle,
+    .btn-back,
+    .btn-more {
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(145deg, #1e3c72, #2a5298);
+      color: #fff;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .btn-toggle:hover,
+    .btn-back:hover,
+    .btn-more:hover {
+      background: linear-gradient(145deg, #274b8e, #142b61);
+      transform: translateY(-2px);
+    }
+
+    /* ===== Content Sections ===== */
+    .section {
+      padding: 30px;
+      margin-top: 30px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      display: none;
+      text-align: left;
+      line-height: 1.6;
+      position: relative;
+    }
+
+    .section h2 {
+      color: #1e3c72;
+      margin-bottom: 20px;
+    }
+
+    /* ===== Extra Links ===== */
+    .extra-links {
+      margin-top: 40px;
+      text-align: center;
+      padding-bottom: 50px;
+    }
+
+    .extra-links a {
+      display: block;
+      color: #1e3c72;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 6px 0;
+      transition: color 0.2s ease-in-out;
+    }
+
+    .extra-links a:hover {
+      text-decoration: underline;
+      color: #2a5298;
+    }
+
+    /* ===== Limited Text Section ===== */
+    .limited-text {
+      max-height: 300px;
+      overflow: hidden;
+      position: relative;
+      transition: max-height 0.4s ease;
+    }
+
+    .fade-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: linear-gradient(to top, #fff, transparent);
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">GrAL info</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Hasiera</a></li>
+          <li class="nav-item"><a class="nav-link active" href="araudia.html">Araudia</a></li>
+          <li class="nav-item"><a class="nav-link" href="egutegia.html">Egutegia</a></li>
+          <li class="nav-item"><a class="nav-link" href="galdetegia.html">Galdetegia</a></li>
+          <li class="nav-item"><a class="nav-link" href="memoriak.html">Memoriak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header (clickable) -->
+  <header class="header" onclick="goBack()">
+    <h1>Araudia</h1>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container text-center" id="main-content">
+    <!-- Default View -->
+    <div id="default-view">
+      <button class="btn btn-toggle" onclick="showSection('osoa')">Araudi Osoa</button>
+      <button class="btn btn-toggle" onclick="showSection('laburtua')">Araudi Laburtua</button>
+
+      <div class="extra-links">
+        <a href="https://www.ehu.eus/documents/d/graduak/gral" target="_blank">GrAL egin eta defendatzeari buruzkoa arautegia</a>
+        <a href="https://www.ehu.eus/documents/d/informatika-fakultatea/normativa_aag_eu" target="_blank">GrAL araudia AA</a>
+        <a href="https://www.ehu.eus/documents/d/informatika-fakultatea/normativa_iig_eu" target="_blank">GrAL araudia II</a>
+      </div>
+    </div>
+
+    <!-- Araudi Osoa -->
+    <div id="osoa" class="section">
+      <h2>Araudi Osoa</h2>
+      <div id="text-container" class="limited-text">
+        <p>
+          <strong>1. ARTIKULUA: Helburua eta ezarpen eremua</strong><br><br>
+          Arautegi honek UPV/EHUk ematen dituen graduko ikasketa planetan zehaztutako gradu amaierako lanak definitu, egin, defendatu, kalifikatu eta tramitatzeko irizpideak jasotzen ditu.
+          Arautatutako jarduera profesionaletan aritzeko gaitasuna ematen duten tituluen kasuan, gradu amaierako lana kasuan kasuko titulua egiaztatzeko baldintzak zehazten dituen aginduan xedatutakoaren arabera arautuko da; arautegi hau ere aplikatuko da, baina, betiere, agindu horren menpe egongo da.
+          Arautegi honen edukia, besteak beste, ebaluazio sistemaren, kredituen transferentzia eta onarpenaren eta ikasleen mugikortasunaren arloetan indarrean dauden UPV/EHUko gainerako arau eta prozedurekin osatuko da. Beste erakunde publiko zein pribatutan egiten diren gradu amaierako lanek arautegi honetan eta kasuan kasuko lankidetza hitzarmenean zehaztutakoari jarraitu beharko diote.
+          Fakultate edo eskoletako batzarrek arautegi hau garatu ahalko dute ikastegi bakoitzean ematen diren graduko titul bakoitzaren ezaugarrietara moldatzeko. Edonola ere, ikastegi bakoitzak zehazten dituen arauak ikastegiko batzarrean onartu eta ikastegian bertan argitaratu beharko dira.
+        </p>
+        <p>
+          <strong>2. ARTIKULUA: Gradu amaierako lanaren izaeraz</strong><br><br>
+          Gradu amaierako lana egiteko, ikasleek, banaka, proiektu, memoria edo azterlan original bat egin behar dute, zuzendari baten edo gehiagoren gidaritzapean, eta bertan graduko ikasketa aldian jasotako prestakuntza gaiak eta lortu dituzten ahalmen, gaitasun eta trebetasunak bildu eta garatuko dira...
+        </p>
+        <p>
+          <strong>3. ARTIKULUA: Gradu amaierako lan motak</strong><br><br>
+          Gradu amaierako lanak, beti lan akademikoak izango direnak eta ikasketa planean jasotako gaitasunak eskuratzera bideratuak, ikastegiek zehaztuko dituzten motatakoak izan daitezke...
+        </p>
+        <div class="fade-overlay"></div>
+      </div>
+
+      <button id="moreBtn" class="btn btn-more" onclick="toggleMore()">Ikusi gehiago</button>
+      <button class="btn btn-back" onclick="goBack()">Itzuli atzera</button>
+    </div>
+
+    <!-- Araudi Laburtua -->
+    <div id="laburtua" class="section">
+      <h2>Araudi Laburtua</h2>
+      <p>
+        Hemen araudiaren bertsio laburra agertzen da. Testu honek puntu nagusiak laburbiltzen ditu.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel feugiat lacus. Donec sed ligula vel nisl
+        interdum fermentum non ut erat.
+      </p>
+      <button class="btn btn-back" onclick="goBack()">Itzuli atzera</button>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function showSection(id) {
+      document.getElementById("default-view").style.display = "none";
+      document.querySelectorAll(".section").forEach(sec => sec.style.display = "none");
+      document.getElementById(id).style.display = "block";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function goBack() {
+      document.querySelectorAll(".section").forEach(sec => sec.style.display = "none");
+      document.getElementById("default-view").style.display = "block";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function toggleMore() {
+      const container = document.getElementById('text-container');
+      const btn = document.getElementById('moreBtn');
+      const overlay = container.querySelector('.fade-overlay');
+
+      if (container.classList.contains('expanded')) {
+        container.classList.remove('expanded');
+        container.style.maxHeight = '300px';
+        overlay.style.display = 'block';
+        btn.textContent = 'Ikusi gehiago';
+      } else {
+        container.classList.add('expanded');
+        container.style.maxHeight = 'none';
+        overlay.style.display = 'none';
+        btn.textContent = 'Ikusi gutxiago';
+      }
+    }
+  </script>
+
+</body>
+
+</html>

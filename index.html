@@ -12,11 +12,18 @@
 
   <style>
     /* Card styling improvements */
+    a.card-link {
+      text-decoration: none !important;
+      color: inherit !important;
+      display: block;
+    }
+
     .card {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       border: none;
       border-radius: 15px;
       overflow: hidden;
+      position: relative;
     }
 
     .card:hover {
@@ -65,16 +72,6 @@
       height: 4px;
       background: linear-gradient(90deg, var(--primary-dark), var(--primary-light), var(--accent-gold, #ffd700));
     }
-
-    /* Button hover effect */
-    .card .btn {
-      transition: all 0.3s ease;
-    }
-
-    .card:hover .btn {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(30, 60, 114, 0.3);
-    }
   </style>
 </head>
 
@@ -116,62 +113,74 @@
 
   <!-- Main Content -->
   <main class="container my-5" role="main">
+
     <div class="row mt-5">
       <div class="col-md-4 mb-4">
-        <div class="card h-100">
-          <div class="card-body text-center">
-            <i class="bi bi-file-text card-icon"></i>
-            <h2 class="card-title">Araudia</h2>
-            <p class="card-text">Kontsultatu Gradu Amaierako Lanaren araudia eta betekizunak.</p>
-            <a href="araudia.html" class="btn btn-primary btn-lg px-4" aria-label="Ikusi Araudia">Ikusi</a>
+        <a href="araudia.html" class="card-link" aria-label="Ikusi Araudia">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="bi bi-file-text card-icon"></i>
+              <h2 class="card-title">Araudia</h2>
+              <p class="card-text">Kontsultatu Gradu Amaierako Lanaren araudia eta betekizunak.</p>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
+
       <div class="col-md-4 mb-4">
-        <div class="card h-100">
-          <div class="card-body text-center">
-            <i class="bi bi-calendar-event card-icon"></i>
-            <h2 class="card-title">Egutegia</h2>
-            <p class="card-text">Aztertu epeak eta defentsa datak ikasturte guztietan.</p>
-            <a href="egutegia.html" class="btn btn-primary btn-lg px-4" aria-label="Ikusi Egutegia">Ikusi</a>
+        <a href="egutegia.html" class="card-link" aria-label="Ikusi Egutegia">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="bi bi-calendar-event card-icon"></i>
+              <h2 class="card-title">Egutegia</h2>
+              <p class="card-text">Aztertu epeak eta defentsa datak ikasturte guztietan.</p>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
+
       <div class="col-md-4 mb-4">
-        <div class="card h-100">
-          <div class="card-body text-center">
-            <i class="bi bi-question-circle card-icon"></i>
-            <h2 class="card-title">Galdetegia</h2>
-            <p class="card-text">Ebaluatu zure ezagutza galdera batzuekin.</p>
-            <a href="galdetegia.html" class="btn btn-primary btn-lg px-4" aria-label="Hasi Galdetegia">Hasi</a>
+        <a href="galdetegia.html" class="card-link" aria-label="Hasi Galdetegia">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="bi bi-question-circle card-icon"></i>
+              <h2 class="card-title">Galdetegia</h2>
+              <p class="card-text">Ebaluatu zure ezagutza galdera batzuekin.</p>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
 
     <div class="row">
+
       <div class="col-md-6 mb-4">
-        <div class="card h-100">
-          <div class="card-body text-center">
-            <i class="bi bi-archive card-icon"></i>
-            <h2 class="card-title">Memoriak</h2>
-            <p class="card-text">Aurreko ikasleen Gradu Amaierako Lanen adibideak.</p>
-            <a href="memoriak.html" class="btn btn-primary btn-lg px-4" aria-label="Ikusi Memoriak">Ikusi</a>
+        <a href="memoriak.html" class="card-link" aria-label="Ikusi Memoriak">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="bi bi-archive card-icon"></i>
+              <h2 class="card-title">Memoriak</h2>
+              <p class="card-text">Aurreko ikasleen Gradu Amaierako Lanen adibideak.</p>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
+
       <div class="col-md-6 mb-4">
-        <div class="card h-100">
-          <div class="card-body text-center">
-            <i class="bi bi-info-circle card-icon"></i>
-            <h2 class="card-title">Laguntza</h2>
-            <p class="card-text">Informazio gehiago behar baduzu, kontsultatu zure fakultateko webgunea.</p>
-            <a href="https://www.ehu.eus/eu/web/informatika-fakultatea" target="_blank" rel="noopener noreferrer"
-              class="btn btn-primary btn-lg px-4" aria-label="Bisitatu fakultatearen webgunea">Bisitatu</a>
+        <a href="https://www.ehu.eus/eu/web/informatika-fakultatea" target="_blank" rel="noopener noreferrer"
+          class="card-link" aria-label="Bisitatu fakultatearen webgunea">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="bi bi-info-circle card-icon"></i>
+              <h2 class="card-title">Laguntza</h2>
+              <p class="card-text">Informazio gehiago behar baduzu, kontsultatu zure fakultateko webgunea.</p>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
+
     </div>
+
   </main>
 
   <!-- Footer -->

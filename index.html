@@ -2,195 +2,111 @@
 <html lang="eu">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GrAL info - Hasiera</title>
-  <meta name="description" content="Gradu Amaierako Lanari buruzko informazioa - araudia, egutegia, eta baliabideak">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrAL info - Hasiera</title>
+    <meta name="description" content="Informazio guztia leku bakarrean">
 
-  <style>
-    /* Card styling improvements */
-    a.card-link {
-      text-decoration: none !important;
-      color: inherit !important;
-      display: block;
-    }
-
-    .card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border: none;
-      border-radius: 15px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .card-body {
-      padding: 2rem 1.5rem;
-    }
-
-    .card-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: var(--primary-dark);
-    }
-
-    .card-text {
-      font-size: 1rem;
-      color: var(--text-light, #666);
-      margin-bottom: 1.5rem;
-      min-height: 3rem;
-    }
-
-    .card-icon {
-      font-size: 3.5rem;
-      color: var(--primary-dark);
-      margin-bottom: 1rem;
-      display: block;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
-
-    .card:hover .card-icon {
-      transform: scale(1.1);
-      color: var(--primary-light);
-    }
-
-    /* Add subtle gradient to cards */
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--primary-dark), var(--primary-light), var(--accent-gold, #ffd700));
-    }
-  </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg" role="navigation" aria-label="Main navigation">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html" aria-label="GrAL info - Home">
-        <i class="bi bi-mortarboard-fill me-2"></i>GrAL info
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page"><i
-                class="bi bi-house-fill me-1"></i>Hasiera</a></li>
-          <li class="nav-item"><a class="nav-link" href="araudia.html"><i class="bi bi-file-text me-1"></i>Araudia</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="egutegia.html"><i
-                class="bi bi-calendar-event me-1"></i>Egutegia</a></li>
-          <li class="nav-item"><a class="nav-link" href="galdetegia.html"><i
-                class="bi bi-question-circle me-1"></i>Galdetegia</a></li>
-          <li class="nav-item"><a class="nav-link" href="memoriak.html"><i class="bi bi-archive me-1"></i>Memoriak</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Header -->
-  <div class="container">
-    <header class="header" role="banner">
-      <h1>Hasiera</h1>
-      <p>Informazio guztia Gradu Amaierako Lanari buruz</p>
+<div id="menu-container"></div>
+
+<div class="container fade-in-up">
+    <header class="hero-header">
+        <h1 class="hero-title">Hasiera</h1>
+        <p class="hero-subtitle">Gradu Amaierako Lanari buruzko gida eta baliabideak.</p>
     </header>
-  </div>
+</div>
 
-  <!-- Main Content -->
-  <main class="container my-5" role="main">
+<main class="container mb-5">
 
-    <div class="row mt-5">
-      <div class="col-md-4 mb-4">
-        <a href="araudia.html" class="card-link" aria-label="Ikusi Araudia">
-          <div class="card h-100">
-            <div class="card-body text-center">
-              <i class="bi bi-file-text card-icon"></i>
-              <h2 class="card-title">Araudia</h2>
-              <p class="card-text">Kontsultatu Gradu Amaierako Lanaren araudia eta betekizunak.</p>
-            </div>
-          </div>
-        </a>
-      </div>
+    <div class="row g-4">
 
-      <div class="col-md-4 mb-4">
-        <a href="egutegia.html" class="card-link" aria-label="Ikusi Egutegia">
-          <div class="card h-100">
-            <div class="card-body text-center">
-              <i class="bi bi-calendar-event card-icon"></i>
-              <h2 class="card-title">Egutegia</h2>
-              <p class="card-text">Aztertu epeak eta defentsa datak ikasturte guztietan.</p>
-            </div>
-          </div>
-        </a>
-      </div>
+        <div class="col-md-4 fade-in-up delay-1">
+            <a href="araudia.html" class="bento-link" aria-label="Joan Araudira">
+                <div class="bento-card">
+                    <i class="bi bi-file-text-fill bento-icon"></i>
+                    <h2 class="bento-title">Araudia</h2>
+                    <p class="bento-text">Arautegia, betekizunak eta dokumentazio ofiziala kontsultatu.</p>
+                </div>
+            </a>
+        </div>
 
-      <div class="col-md-4 mb-4">
-        <a href="galdetegia.html" class="card-link" aria-label="Hasi Galdetegia">
-          <div class="card h-100">
-            <div class="card-body text-center">
-              <i class="bi bi-question-circle card-icon"></i>
-              <h2 class="card-title">Galdetegia</h2>
-              <p class="card-text">Ebaluatu zure ezagutza galdera batzuekin.</p>
-            </div>
-          </div>
-        </a>
-      </div>
+        <div class="col-md-4 fade-in-up delay-2">
+            <a href="egutegia.html" class="bento-link" aria-label="Joan Egutegira">
+                <div class="bento-card">
+                    <i class="bi bi-calendar-check-fill bento-icon"></i>
+                    <h2 class="bento-title">Egutegia</h2>
+                    <p class="bento-text">Entrega datak, defentsak eta epe garrantzitsuak egiaztatu.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4 fade-in-up delay-3">
+            <a href="galdetegia.html" class="bento-link" aria-label="Joan Galdetegira">
+                <div class="bento-card">
+                    <i class="bi bi-patch-question-fill bento-icon"></i>
+                    <h2 class="bento-title">Galdetegia</h2>
+                    <p class="bento-text">Probatu zure ezagutza test interaktibo azkar batekin.</p>
+                </div>
+            </a>
+        </div>
     </div>
 
-    <div class="row">
+    <div class="row g-4 mt-1">
 
-      <div class="col-md-6 mb-4">
-        <a href="memoriak.html" class="card-link" aria-label="Ikusi Memoriak">
-          <div class="card h-100">
-            <div class="card-body text-center">
-              <i class="bi bi-archive card-icon"></i>
-              <h2 class="card-title">Memoriak</h2>
-              <p class="card-text">Aurreko ikasleen Gradu Amaierako Lanen adibideak.</p>
-            </div>
-          </div>
-        </a>
-      </div>
+        <div class="col-md-6 fade-in-up delay-4">
+            <a href="memoriak.html" class="bento-link" aria-label="Ikusi Memoriak">
+                <div class="bento-card">
+                    <i class="bi bi-archive-fill bento-icon"></i>
+                    <h2 class="bento-title">Memoriak</h2>
+                    <p class="bento-text">Aurreko urteetako lan bikainen bilduma eta adibide errealak.</p>
+                </div>
+            </a>
+        </div>
 
-      <div class="col-md-6 mb-4">
-        <a href="https://www.ehu.eus/eu/web/informatika-fakultatea" target="_blank" rel="noopener noreferrer"
-          class="card-link" aria-label="Bisitatu fakultatearen webgunea">
-          <div class="card h-100">
-            <div class="card-body text-center">
-              <i class="bi bi-info-circle card-icon"></i>
-              <h2 class="card-title">Laguntza</h2>
-              <p class="card-text">Informazio gehiago behar baduzu, kontsultatu zure fakultateko webgunea.</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
+        <div class="col-md-6 fade-in-up delay-4">
+            <a href="norgara.html" class="bento-link" aria-label="Ezagutu Taldea">
+                <div class="bento-card">
+                    <i class="bi bi-people-fill bento-icon"></i>
+                    <h2 class="bento-title">Nor Gara</h2>
+                    <p class="bento-text">Ezagutu GrAL Info plataforma posible egin duen ikasle taldea.</p>
+                </div>
+            </a>
+        </div>
     </div>
 
-  </main>
-
-  <!-- Footer -->
-  <footer class="py-4" role="contentinfo">
-    <div class="container text-center">
-      <p class="mb-0">&copy; 2025 GrAL info - Euskal Herriko Unibertsitatea</p>
+    <div class="row mt-5 fade-in-up delay-4">
+        <div class="col-12">
+            <a href="https://www.ehu.eus/eu/web/informatika-fakultatea" target="_blank" rel="noopener noreferrer" class="bento-link">
+                <div class="bento-card wide">
+                    <div class="flex-shrink-0">
+                        <i class="bi bi-info-circle-fill bento-icon" style="font-size: 2.5rem;"></i>
+                    </div>
+                    <div>
+                        <h3 class="bento-title h4">Fakultateko Webgunea</h3>
+                        <p class="bento-text mb-0">Informazio ofiziala edo tramite administratiboetarako, kontsultatu iturria zuzenean.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
-  </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</main>
+
+<footer style="text-align: center; padding: 3rem; color: #86868b; opacity: 0.8;">
+    <div class="container">
+        <p class="mb-0">&copy; 2025 GrAL info - Euskal Herriko Unibertsitatea</p>
+    </div>
+</footer>
+
+<script src="menu.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -1,178 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="eu">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Memoriak - GrAL info</title>
-  <meta name="description" content="Aurreko ikasleen Gradu Amaierako Lanen adibideak">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoriak - GrAL info</title>
+    <meta name="description" content="Aurreko ikasleen Gradu Amaierako Lanen adibideak">
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
-  <style>
-    .box {
-      padding: 30px 20px;
-      margin: 20px 0;
-      text-align: center;
-      border-radius: 15px;
-      color: #fff;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-      display: block;
-      text-decoration: none !important;
-    }
-
-    .box::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 50%;
-      background: rgba(255, 255, 255, 0.2);
-      transform: skewY(-20deg);
-      pointer-events: none;
-    }
-
-    .box:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-    }
-
-    .box .icon {
-      font-size: 3.5em;
-      margin-bottom: 15px;
-    }
-
-    .box h4 {
-      font-size: 1.4em;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .box p {
-      font-size: 0.95em;
-      line-height: 1.4;
-      margin: 0;
-    }
-
-    /* Box Colors */
-    .box-software {
-      background: linear-gradient(145deg, #1e3c72, #2a5298);
-    }
-
-    .box-hardware {
-      background: linear-gradient(145deg, #6a11cb, #2575fc);
-    }
-
-    .box-computation {
-      background: linear-gradient(145deg, #ff416c, #ff4b2b);
-    }
-
-    .box-ai {
-      background: linear-gradient(145deg, #f7971e, #ffd200);
-      color: #333 !important;
-    }
-
-    .box-ai h4,
-    .box-ai p {
-      color: #333 !important;
-    }
-  </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg" role="navigation" aria-label="Main navigation">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html" aria-label="GrAL info - Home">
-        <i class="bi bi-mortarboard-fill me-2"></i>GrAL info
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-fill me-1"></i>Hasiera</a></li>
-          <li class="nav-item"><a class="nav-link" href="araudia.html"><i class="bi bi-file-text me-1"></i>Araudia</a></li>
-          <li class="nav-item"><a class="nav-link" href="egutegia.html"><i class="bi bi-calendar-event me-1"></i>Egutegia</a></li>
-          <li class="nav-item"><a class="nav-link" href="galdetegia.html"><i class="bi bi-question-circle me-1"></i>Galdetegia</a></li>
-          <li class="nav-item"><a class="nav-link active" href="memoriak.html" aria-current="page"><i
-                class="bi bi-archive me-1"></i>Memoriak</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<div id="menu-container"></div>
 
-  <!-- Header -->
-  <div class="container">
-    <header class="header" role="banner">
-      <h1>Memoriak</h1>
-      <p>Aurreko ikasleen Gradu Amaierako Lanen adibideak</p>
+<div class="container fade-in-up">
+    <header class="hero-header">
+        <span class="badge-ios">Adibideak</span>
+        <h1 class="hero-title">Memoriak</h1>
+        <p class="hero-subtitle">Inspiratu zaitez aurreko ikasleen lan bikainekin</p>
     </header>
-  </div>
+</div>
 
-  <!-- Main Content (4 Boxes) -->
-  <main class="container" role="main">
+<main class="container mb-5" role="main">
     <div class="row justify-content-center g-4">
 
-      <!-- Software Engineering -->
-      <div class="col-md-6 col-lg-3">
-        <a href="https://addi.ehu.es/handle/10810/13140" target="_blank" rel="noopener noreferrer" class="box box-software">
-          <div class="icon"><i class="bi bi-code-slash"></i></div>
-          <h4>Software Engineering</h4>
-          <p>Explore software design, development, and best practices.</p>
-        </a>
-      </div>
+        <div class="col-md-6 col-lg-3 fade-in-up delay-1">
+            <a href="https://addi.ehu.es/handle/10810/13140" target="_blank" rel="noopener noreferrer" class="memory-card card-software">
+                <div class="memory-icon"><i class="bi bi-code-slash"></i></div>
+                <h4 class="memory-title">Softwarea</h4>
+                <p class="memory-desc">Softwarearen diseinua, garapena, arkitektura eta kode garbiaren jardunbide egokiak.</p>
+            </a>
+        </div>
 
-      <!-- Hardware -->
-      <div class="col-md-6 col-lg-3">
-        <a href="https://addi.ehu.es/handle/10810/13139" target="_blank" rel="noopener noreferrer" class="box box-hardware">
-          <div class="icon"><i class="bi bi-cpu"></i></div>
-          <h4>Hardware</h4>
-          <p>Learn about circuits, processors, and computer architecture.</p>
-        </a>
-      </div>
+        <div class="col-md-6 col-lg-3 fade-in-up delay-2">
+            <a href="https://addi.ehu.es/handle/10810/13139" target="_blank" rel="noopener noreferrer" class="memory-card card-hardware">
+                <div class="memory-icon"><i class="bi bi-cpu-fill"></i></div>
+                <h4 class="memory-title">Hardwarea</h4>
+                <p class="memory-desc">Zirkuituak, prozesadoreak, sistemen integrazioa eta ordenagailuen arkitektura.</p>
+            </a>
+        </div>
 
-      <!-- Computation -->
-      <div class="col-md-6 col-lg-3">
-        <a href="https://addi.ehu.es/handle/10810/13138" target="_blank" rel="noopener noreferrer"
-          class="box box-computation">
-          <div class="icon"><i class="bi bi-calculator"></i></div>
-          <h4>Computation</h4>
-          <p>Dive into algorithms, numerical methods, and computing theory.</p>
-        </a>
-      </div>
+        <div class="col-md-6 col-lg-3 fade-in-up delay-3">
+            <a href="https://addi.ehu.es/handle/10810/13138" target="_blank" rel="noopener noreferrer" class="memory-card card-computation">
+                <div class="memory-icon"><i class="bi bi-calculator-fill"></i></div>
+                <h4 class="memory-title">Konputazioa</h4>
+                <p class="memory-desc">Algoritmo konplexuak, metodo numerikoak, kriptografia eta konputazioaren teoria.</p>
+            </a>
+        </div>
 
-      <!-- Artificial Intelligence -->
-      <div class="col-md-6 col-lg-3">
-        <a href="https://addi.ehu.es/handle/10810/73965" target="_blank" rel="noopener noreferrer" class="box box-ai">
-          <div class="icon"><i class="bi bi-robot"></i></div>
-          <h4>Artificial Intelligence</h4>
-          <p>Explore machine learning, neural networks, and AI applications.</p>
-        </a>
-      </div>
+        <div class="col-md-6 col-lg-3 fade-in-up delay-4">
+            <a href="https://addi.ehu.es/handle/10810/73965" target="_blank" rel="noopener noreferrer" class="memory-card card-ai">
+                <div class="memory-icon"><i class="bi bi-robot"></i></div>
+                <h4 class="memory-title">Adimen Artifiziala</h4>
+                <p class="memory-desc">Ikasketa automatikoa (ML), sare neuronalak, datuen analisia eta ikusmen artifiziala.</p>
+            </a>
+        </div>
 
     </div>
-  </main>
+</main>
 
-  <!-- Return to Home Button -->
-  <div class="container text-center mb-5">
-    <a href="index.html" class="btn btn-primary btn-lg px-4" aria-label="Itzuli hasierako orrira">
-      <i class="bi bi-house me-2"></i>Hasierara itzuli
+<div class="container text-center mb-5 fade-in-up delay-4">
+    <a href="index.html" class="btn-ios-back">
+        <i class="bi bi-arrow-left me-2"></i>Hasierara itzuli
     </a>
-  </div>
+</div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="menu.js"></script>
 </body>
 </html>

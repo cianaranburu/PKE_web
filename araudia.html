@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Araudia - GrAL info</title>
+    <title data-i18n="title_regulation">Araudia - GrAL info</title>
     <meta name="description" content="Gradu Amaierako Lanaren arautegia eta dokumentazio ofiziala">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -36,18 +36,18 @@
 
 <div class="container fade-in-up">
     <header class="hero-header" onclick="window.location.href='index.html'" style="cursor: pointer;">
-        <h1 class="hero-title">Araudia</h1>
-        <p class="hero-subtitle">Gradu Amaierako Lanaren arautegia eta gakoak.</p>
+        <h1 class="hero-title" data-i18n="title_regulation">Araudia</h1>
+        <p class="hero-subtitle" data-i18n="subtitle_regulation">Gradu Amaierako Lanaren arautegia eta gakoak.</p>
     </header>
 </div>
 
 <main class="container mb-5" role="main">
 
     <div class="text-center fade-in-up delay-1">
-        <div class="ios-segmented-control">
-            <button id="btn-osoa" class="segment-btn active" onclick="switchTab('osoa')">Araudi Osoa</button>
-            <button id="btn-laburtua" class="segment-btn" onclick="switchTab('laburtua')">Laburpena</button>
-        </div>
+            <div class="ios-segmented-control">
+                <button id="btn-osoa" class="segment-btn active" onclick="switchTab('osoa')" data-i18n="btn_full_regulation">Araudi Osoa</button>
+                <button id="btn-laburtua" class="segment-btn" onclick="switchTab('laburtua')" data-i18n="btn_summary_regulation">Laburpena</button>
+            </div>
     </div>
 
     <div id="osoa" class="fade-in-up delay-2">
@@ -55,33 +55,33 @@
 
             <div class="col-lg-4 order-lg-last">
                 <div class="sticky-sidebar">
-                    <h4 class="docs-title">Dokumentu Ofizialak</h4>
+                    <h4 class="docs-title" data-i18n="docs_official">Dokumentu Ofizialak</h4>
                     <div class="ios-list" style="margin-top: 0;">
                         <a href="https://www.ehu.eus/documents/d/graduak/gral" target="_blank" class="ios-list-item">
                             <div class="ios-list-icon"><i class="bi bi-file-earmark-pdf-fill" style="color: #FF3B30;"></i></div>
                             <div>
-                                <div class="fw-bold" style="font-size: 0.95rem;">Araudi Orokorra</div>
-                                <div class="small text-muted">PDF Ofiziala</div>
+                                <div class="fw-bold" style="font-size: 0.95rem;" data-i18n="doc_general_regulation">Araudi Orokorra</div>
+                                <div class="small text-muted" data-i18n="doc_pdf">PDF Ofiziala</div>
                             </div>
                         </a>
                         <a href="https://www.ehu.eus/documents/d/informatika-fakultatea/normativa_aag_eu" target="_blank" class="ios-list-item">
                             <div class="ios-list-icon"><i class="bi bi-robot" style="color: #007AFF;"></i></div>
                             <div>
-                                <div class="fw-bold" style="font-size: 0.95rem;">Adimen Artifiziala</div>
-                                <div class="small text-muted">Berariazkoa</div>
+                                <div class="fw-bold" style="font-size: 0.95rem;" data-i18n="doc_ai">Adimen Artifiziala</div>
+                                <div class="small text-muted" data-i18n="doc_specific">Berariazkoa</div>
                             </div>
                         </a>
                         <a href="https://www.ehu.eus/documents/d/informatika-fakultatea/normativa_iig_eu" target="_blank" class="ios-list-item">
                             <div class="ios-list-icon"><i class="bi bi-cpu-fill" style="color: #5856D6;"></i></div>
                             <div>
-                                <div class="fw-bold" style="font-size: 0.95rem;">Informatika Ing.</div>
-                                <div class="small text-muted">Berariazkoa</div>
+                                <div class="fw-bold" style="font-size: 0.95rem;" data-i18n="doc_cs">Informatika Ing.</div>
+                                <div class="small text-muted" data-i18n="doc_specific">Berariazkoa</div>
                             </div>
                         </a>
                     </div>
 
                     <div class="glass-card mt-3 p-3" style="text-align: left; background: rgba(255,255,255,0.4);">
-                        <p class="small text-secondary mb-0"><i class="bi bi-info-circle me-2"></i>Dokumentu hauek ofizialak dira eta lehentasuna dute.</p>
+                        <p class="small text-secondary mb-0" data-i18n="docs_note"><i class="bi bi-info-circle me-2"></i>Dokumentu hauek ofizialak dira eta lehentasuna dute.</p>
                     </div>
                 </div>
             </div>
@@ -92,72 +92,82 @@
                     <div id="text-container" class="limited-text legal-doc">
 
                         <div class="article-block">
-                            <span class="article-number">1. Artikulua</span>
-                            <h3 class="article-title-text">Helburua eta Ezarpen Eremua</h3>
-                            <p class="article-text">Arautegi honek UPV/EHUk ematen dituen graduko ikasketa planetan zehaztutako gradu amaierako lanak (GrAL) definitu, egin, defendatu, kalifikatu eta tramitatzeko irizpideak jasotzen ditu.</p>
+                            <span class="article-number" data-i18n="art1_number">1. Artikulua</span>
+                            <h3 class="article-title-text" data-i18n="art1_title">Helburua eta Ezarpen Eremua</h3>
+                            <p class="article-text" data-i18n="art1_text">Arautegi honek UPV/EHUk ematen dituen graduko ikasketa planetan zehaztutako gradu amaierako lanak (GrAL) definitu, egin, defendatu, kalifikatu eta tramitatzeko irizpideak jasotzen ditu.</p>
                         </div>
 
                         <div class="article-block">
-                            <span class="article-number">2. Artikulua</span>
-                            <h3 class="article-title-text">Izaera eta Kredituak</h3>
-                            <p class="article-text">Ikasleek, banaka, proiektu edo azterlan original bat egin behar dute. GrALa <strong>12 ECTS kredituko</strong> derrigorrezko irakasgaia da eta graduko azken mailan egin behar da.</p>
+                            <span class="article-number" data-i18n="art2_number">2. Artikulua</span>
+                            <h3 class="article-title-text" data-i18n="art2_title">Izaera eta Kredituak</h3>
+                            <p class="article-text" data-i18n="art2_text">Ikasleek, banaka, proiektu edo azterlan original bat egin behar dute. GrALa <strong>12 ECTS kredituko</strong> derrigorrezko irakasgaia da eta graduko azken mailan egin behar da.</p>
+                        </div>
+
+                        <!-- Añade data-i18n a todos los artículos restantes del 3 al 10 -->
+                        <div class="article-block">
+                            <span class="article-number" data-i18n="art3_number">3. Artikulua</span>
+                            <h3 class="article-title-text" data-i18n="art3_title">Matrikula</h3>
+                            <p class="article-text" data-i18n="art3_text">GrALean matrikulatzeko, ikasleak titulazioa lortzeko falta zaizkion kreditu guztiak matrikulatuta izan beharko ditu. Salbuespenak salbuespen, ezin dira kreditu solteak utzi.</p>
+                        </div>
+                        <div class="article-block">
+                            <span class="article-number" data-i18n="art4_number">4. Artikulua</span>
+                            <h3 class="article-title-text" data-i18n="art4_title">Deialdiak</h3>
+                            <p class="article-text" data-i18n="art4_text">Matrikulak ikasturte bakoitzeko bi deialditara aurkezteko eskubidea ematen du (ohikoa eta ezohikoa). Defentsarako eskaera GAUR plataformaren bidez egin behar da.</p>
+                        </div>
+                        <div class="article-block">
+                            <span class="article-number" data-i18n="art5_number">5. Artikulua</span>
+                            <h3 class="article-title-text" data-i18n="art5_title">Zuzendaritza</h3>
+                            <p class="article-text" data-i18n="art5_text">
+                                Lan bakoitzak gutxienez zuzendari bat izango du (titulazioko irakaslea). Zuzendariak defentsarako oniritzia eman behar du GAURen; hori gabe, ezin da defendatu.
+                            </p>
                         </div>
 
                         <div class="article-block">
-                            <span class="article-number">3. Artikulua</span>
-                            <h3 class="article-title-text">Matrikula</h3>
-                            <p class="article-text">GrALean matrikulatzeko, ikasleak titulazioa lortzeko falta zaizkion kreditu guztiak matrikulatuta izan beharko ditu. Salbuespenak salbuespen, ezin dira kreditu solteak utzi.</p>
+                            <span class="article-number" data-i18n="art6_number"> 6. Artikulua</span>
+                            <h3 class="article-title-text" data-i18n="art6_title">Hizkuntza</h3>
+                            <p class="article-text" data-i18n="art6_text">
+                                Memoria eta defentsa Graduko hizkuntza ofizialetan (Euskara, Gaztelania) edo Ingelesez egin daitezke, betiere ikastegiko araudia errespetatuz.
+                            </p>
                         </div>
 
                         <div class="article-block">
-                            <span class="article-number">4. Artikulua</span>
-                            <h3 class="article-title-text">Deialdiak</h3>
-                            <p class="article-text">Matrikulak ikasturte bakoitzeko bi deialditara aurkezteko eskubidea ematen du (ohikoa eta ezohikoa). Defentsarako eskaera GAUR plataformaren bidez egin behar da.</p>
+                            <span class="article-number" data-i18n="art7_number">7. Artikulua</span>
+                            <h3 class="article-title-text" data-i18n="art7_title">Defentsa Publikoa</h3>
+                            <p class="article-text" data-i18n="art7_text">
+                                Jendaurreko ekitaldia da. Ikasleak <strong>15-20 minutu</strong> ditu aurkezteko. Ondoren, epaimahaiko 3 kideek galderak egingo dituzte.
+                            </p>
                         </div>
 
                         <div class="article-block">
-                            <span class="article-number">5. Artikulua</span>
-                            <h3 class="article-title-text">Zuzendaritza</h3>
-                            <p class="article-text">Lan bakoitzak gutxienez zuzendari bat izango du (titulazioko irakaslea). Zuzendariak defentsarako oniritzia eman behar du GAURen; hori gabe, ezin da defendatu.</p>
+                            <span class="article-number" data-i18n="art8_number">8. Artikulua</span>
+                            <h3 class="article-title-text" data-i18n="art8_title">Ebaluazioa</h3>
+                            <p class="article-text" data-i18n="art8_text">
+                                Nota (0-10) hiru alderditan oinarritzen da: Zuzendariaren txostena, Memoria idatzia eta Ahozko defentsa. 9.0 baino gehiago lortuz gero, Ohorezko Matrikula proposatu daiteke.
+                            </p>
                         </div>
 
                         <div class="article-block">
-                            <span class="article-number">6. Artikulua</span>
-                            <h3 class="article-title-text">Hizkuntza</h3>
-                            <p class="article-text">Memoria eta defentsa Graduko hizkuntza ofizialetan (Euskara, Gaztelania) edo Ingelesez egin daitezke, betiere ikastegiko araudia errespetatuz.</p>
+                            <span class="article-number" data-i18n="art9_number">9. Artikulua</span>
+                            <h3 class="article-title-text" data-i18n="art9_title">Plagioa eta Etika</h3>
+                            <p class="article-text" data-i18n="art9_text">
+                                Lanak originala izan behar du. Plagioa antzematen bada (Turnitin bidez), kalifikazioa 0 izango da eta neurri disziplinarioak har daitezke.
+                            </p>
                         </div>
 
                         <div class="article-block">
-                            <span class="article-number">7. Artikulua</span>
-                            <h3 class="article-title-text">Defentsa Publikoa</h3>
-                            <p class="article-text">Jendaurreko ekitaldia da. Ikasleak <strong>15-20 minutu</strong> ditu aurkezteko. Ondoren, epaimahaiko 3 kideek galderak egingo dituzte.</p>
+                            <span class="article-number" data-i18n="art10_number">10. Artikulua</span>
+                            <h3 class="article-title-text" data-i18n="art10_title">Argitalpena</h3>
+                            <p class="article-text" data-i18n="art10_text">
+                                Defentsa gainditu duten lanak ADDI biltegian argitaratuko dira, baldin eta ikasleak baimena ematen badu.
+                            </p>
                         </div>
-
-                        <div class="article-block">
-                            <span class="article-number">8. Artikulua</span>
-                            <h3 class="article-title-text">Ebaluazioa</h3>
-                            <p class="article-text">Nota (0-10) hiru alderditan oinarritzen da: Zuzendariaren txostena, Memoria idatzia eta Ahozko defentsa. 9.0 baino gehiago lortuz gero, Ohorezko Matrikula proposatu daiteke.</p>
-                        </div>
-
-                        <div class="article-block">
-                            <span class="article-number">9. Artikulua</span>
-                            <h3 class="article-title-text">Plagioa eta Etika</h3>
-                            <p class="article-text">Lanak originala izan behar du. Plagioa antzematen bada (Turnitin bidez), kalifikazioa 0 izango da eta neurri disziplinarioak har daitezke.</p>
-                        </div>
-
-                        <div class="article-block">
-                            <span class="article-number">10. Artikulua</span>
-                            <h3 class="article-title-text">Argitalpena</h3>
-                            <p class="article-text">Defentsa gainditu duten lanak ADDI biltegian argitaratuko dira, baldin eta ikasleak baimena ematen badu.</p>
-                        </div>
-
                         <div class="fade-overlay"></div>
                     </div>
 
                     <div class="text-center mt-4">
                         <button id="moreBtn" class="btn-ghost" onclick="toggleMore()">
                             <i class="bi bi-chevron-down me-2"></i>
-                            <span>Irakurri gehiago</span>
+                            <span data-i18n="btn_read_more">Irakurri gehiago</span>
                         </button>
                     </div>
                 </div>
@@ -171,48 +181,48 @@
             <div class="col">
                 <div class="bento-card fade-in" style="animation-delay: 0.1s">
                     <div class="bento-icon"><i class="bi bi-mortarboard-fill"></i></div>
-                    <h3 class="bento-title">12 Kreditu</h3>
-                    <p class="bento-text">Gradu Amaierako Lanak 12 ECTS kreditu balio du eta ikasketen amaieran egiten da.</p>
+                    <h3 class="bento-title" data-i18n="summary_credit">12 Kreditu</h3>
+                    <p class="bento-text" data-i18n="summary_credit_text">Gradu Amaierako Lanak 12 ECTS kreditu balio du eta ikasketen amaieran egiten da.</p>
                 </div>
             </div>
 
             <div class="col">
                 <div class="bento-card fade-in" style="animation-delay: 0.2s">
                     <div class="bento-icon"><i class="bi bi-check-circle-fill" style="color: #34C759;"></i></div>
-                    <h3 class="bento-title">Matrikula</h3>
-                    <p class="bento-text">Kreditu guztiak gaindituta izan behar dituzu (GrAL ezik) matrikulatu ahal izateko.</p>
+                    <h3 class="bento-title" data-i18n="summary_enrollment">Matrikula</h3>
+                    <p class="bento-text" data-i18n="summary_enrollment_text">Kreditu guztiak gaindituta izan behar dituzu (GrAL ezik) matrikulatu ahal izateko.</p>
                 </div>
             </div>
 
             <div class="col">
                 <div class="bento-card fade-in" style="animation-delay: 0.3s">
                     <div class="bento-icon"><i class="bi bi-person-video3" style="color: #FF9500;"></i></div>
-                    <h3 class="bento-title">Zuzendaritza</h3>
-                    <p class="bento-text">Titulazioko irakasle batek gidatuko zaitu eta defentsarako oniritzia eman behar du.</p>
+                    <h3 class="bento-title" data-i18n="summary_director">Zuzendaritza</h3>
+                    <p class="bento-text" data-i18n="summary_director_text">Titulazioko irakasle batek gidatuko zaitu eta defentsarako oniritzia eman behar du.</p>
                 </div>
             </div>
 
             <div class="col">
                 <div class="bento-card fade-in" style="animation-delay: 0.4s">
                     <div class="bento-icon"><i class="bi bi-calendar4-week" style="color: #FF2D55;"></i></div>
-                    <h3 class="bento-title">4 Deialdi</h3>
-                    <p class="bento-text">Ikasturte bakoitzean 4 aukera dituzu lana aurkezteko eta defendatzeko.</p>
+                    <h3 class="bento-title" data-i18n="summary_calls">4 Deialdi</h3>
+                    <p class="bento-text" data-i18n="summary_calls_text">Ikasturte bakoitzean 4 aukera dituzu lana aurkezteko eta defendatzeko.</p>
                 </div>
             </div>
 
             <div class="col">
                 <div class="bento-card fade-in" style="animation-delay: 0.5s">
                     <div class="bento-icon"><i class="bi bi-clock-history" style="color: #5856D6;"></i></div>
-                    <h3 class="bento-title">Defentsa</h3>
-                    <p class="bento-text">Publikoa da. 15-20 minutu aurkezteko eta ondoren epaimahaiaren galderak.</p>
+                    <h3 class="bento-title" data-i18n="summary_defense">Defentsa</h3>
+                    <p class="bento-text" data-i18n="summary_defense_text">Publikoa da. 15-20 minutu aurkezteko eta ondoren epaimahaiaren galderak.</p>
                 </div>
             </div>
 
             <div class="col">
                 <div class="bento-card fade-in" style="animation-delay: 0.6s">
                     <div class="bento-icon"><i class="bi bi-cloud-arrow-up-fill" style="color: #007AFF;"></i></div>
-                    <h3 class="bento-title">ADDI</h3>
-                    <p class="bento-text">Gainditutako lanak EHUko ADDI biltegi digitalean argitaratzen dira.</p>
+                    <h3 class="bento-title" data-i18n="summary_addi">ADDI</h3>
+                    <p class="bento-text" data-i18n="summary_addi_text">Gainditutako lanak EHUko ADDI biltegi digitalean argitaratzen dira.</p>
                 </div>
             </div>
 
@@ -222,8 +232,9 @@
 </main>
 
 <div class="text-center mb-5 fade-in-up delay-3">
-    <a href="index.html" class="btn-ghost" style="padding: 12px 30px;">
-        <i class="bi bi-arrow-left me-2"></i>Hasierara itzuli
+    <a href="index.html" class="btn-ios-back">
+        <i class="bi bi-arrow-left me-2"></i>
+        <span data-i18n="btn_back_home">Hasierara itzuli</span>
     </a>
 </div>
 
@@ -239,10 +250,14 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="menu.js"></script>
+<script src="i18n.js"></script>
+<script src="theme.js"></script>
+<script src="menu.js"></script>
 
 <script>
     // LOGICA DE PESTAÑAS (SWITCHER)
     function switchTab(tabId) {
+        // Activar botón seleccionado
         document.querySelectorAll('.segment-btn').forEach(btn => btn.classList.remove('active'));
         document.getElementById('btn-' + tabId).classList.add('active');
 
@@ -257,11 +272,11 @@
             osoa.classList.add('hidden');
             laburtua.classList.remove('hidden');
 
-            // Reiniciar animación
+            // Reiniciar animación de tarjetas
             const cards = laburtua.querySelectorAll('.bento-card');
             cards.forEach(card => {
                 card.style.animation = 'none';
-                card.offsetHeight;
+                card.offsetHeight; // forzar reflow
                 card.style.animation = null;
             });
         }
@@ -276,25 +291,27 @@
         const overlay = container.querySelector('.fade-overlay');
 
         if (container.style.maxHeight === 'none') {
-            // ITXI (TOLESTU)
+            // Cerrar (Toletsu)
             container.style.maxHeight = '400px';
             overlay.style.opacity = '1';
             icon.className = 'bi bi-chevron-down';
             text.innerText = 'Irakurri gehiago';
             container.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } else {
-            // IREKI (ZABALDU)
+            // Abrir (Zabaldu)
             container.style.maxHeight = 'none';
             overlay.style.opacity = '0';
             icon.className = 'bi bi-chevron-up';
-            text.innerText = 'Ikusi gutxiago'; // HEMEN DAGO ALDAKETA
+            text.innerText = 'Ikusi gutxiago';
         }
     }
 
+    // Inicializar altura máxima del contenedor de artículos
     document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('text-container').style.maxHeight = '400px';
     });
 
+    // BOTÓN BACK TO TOP
     const backToTopBtn = document.getElementById('backToTop');
     window.onscroll = function () {
         if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
@@ -308,6 +325,7 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 </script>
+
 
 </body>
 </html>

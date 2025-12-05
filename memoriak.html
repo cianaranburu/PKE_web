@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memoriak - GrAL info</title>
+    <title data-i18n="title_memories">Memoriak - GrAL info</title>
     <meta name="description" content="Aurreko ikasleen Gradu Amaierako Lanen adibideak">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,9 +19,8 @@
 
 <div class="container fade-in-up">
     <header class="hero-header">
-        <span class="badge-ios">Adibideak</span>
-        <h1 class="hero-title">Memoriak</h1>
-        <p class="hero-subtitle">Inspiratu zaitez aurreko ikasleen lan bikainekin</p>
+        <h1 class="hero-title" data-i18n="title_memories">Memoriak</h1>
+        <p class="hero-subtitle" data-i18n="subtitle_memories">Inspiratu zaitez aurreko ikasleen lan bikainekin</p>
     </header>
 </div>
 
@@ -31,32 +30,32 @@
         <div class="col-md-6 col-lg-3 fade-in-up delay-1">
             <a href="https://addi.ehu.es/handle/10810/13140" target="_blank" rel="noopener noreferrer" class="memory-card card-software">
                 <div class="memory-icon"><i class="bi bi-code-slash"></i></div>
-                <h4 class="memory-title">Softwarea</h4>
-                <p class="memory-desc">Softwarearen diseinua, garapena, arkitektura eta kode garbiaren jardunbide egokiak.</p>
+                <h4 class="memory-title" data-i18n="card_software_title">Softwarea</h4>
+                <p class="memory-desc" data-i18n="card_software_desc">Softwarearen diseinua, garapena, arkitektura eta kode garbiaren jardunbide egokiak.</p>
             </a>
         </div>
 
         <div class="col-md-6 col-lg-3 fade-in-up delay-2">
             <a href="https://addi.ehu.es/handle/10810/13139" target="_blank" rel="noopener noreferrer" class="memory-card card-hardware">
                 <div class="memory-icon"><i class="bi bi-cpu-fill"></i></div>
-                <h4 class="memory-title">Hardwarea</h4>
-                <p class="memory-desc">Zirkuituak, prozesadoreak, sistemen integrazioa eta ordenagailuen arkitektura.</p>
+                <h4 class="memory-title" data-i18n="card_hardware_title">Hardwarea</h4>
+                <p class="memory-desc" data-i18n="card_hardware_desc">Zirkuituak, prozesadoreak, sistemen integrazioa eta ordenagailuen arkitektura.</p>
             </a>
         </div>
 
         <div class="col-md-6 col-lg-3 fade-in-up delay-3">
             <a href="https://addi.ehu.es/handle/10810/13138" target="_blank" rel="noopener noreferrer" class="memory-card card-computation">
                 <div class="memory-icon"><i class="bi bi-calculator-fill"></i></div>
-                <h4 class="memory-title">Konputazioa</h4>
-                <p class="memory-desc">Algoritmo konplexuak, metodo numerikoak, kriptografia eta konputazioaren teoria.</p>
+                <h4 class="memory-title" data-i18n="card_computation_title">Konputazioa</h4>
+                <p class="memory-desc" data-i18n="card_computation_desc">Algoritmo konplexuak, metodo numerikoak, kriptografia eta konputazioaren teoria.</p>
             </a>
         </div>
 
         <div class="col-md-6 col-lg-3 fade-in-up delay-4">
             <a href="https://addi.ehu.es/handle/10810/73965" target="_blank" rel="noopener noreferrer" class="memory-card card-ai">
                 <div class="memory-icon"><i class="bi bi-robot"></i></div>
-                <h4 class="memory-title">Adimen Artifiziala</h4>
-                <p class="memory-desc">Ikasketa automatikoa (ML), sare neuronalak, datuen analisia eta ikusmen artifiziala.</p>
+                <h4 class="memory-title" data-i18n="card_ai_title">Adimen Artifiziala</h4>
+                <p class="memory-desc" data-i18n="card_ai_desc">Ikasketa automatikoa (ML), sare neuronalak, datuen analisia eta ikusmen artifiziala.</p>
             </a>
         </div>
 
@@ -65,11 +64,13 @@
 
 <div class="container text-center mb-5 fade-in-up delay-4">
     <a href="index.html" class="btn-ios-back">
-        <i class="bi bi-arrow-left me-2"></i>Hasierara itzuli
+        <i class="bi bi-arrow-left me-2"></i><span data-i18n="btn_back_home">Hasierara itzuli</span>
     </a>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="i18n.js"></script>
+<script src="theme.js"></script>
 <script src="menu.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galdetegia - GrAL info</title>
+    <title data-i18n="title_quiz">Galdetegia - GrAL info</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -17,8 +17,7 @@
 
 <div class="container fade-in-up">
     <header class="hero-header">
-        <span class="badge-ios">Test Interaktiboa</span>
-        <h1 class="hero-title">Galdetegia</h1>
+        <h1 class="hero-title" data-i18n="title_quiz">Galdetegia</h1>
     </header>
 </div>
 
@@ -45,82 +44,142 @@
         <div id="questionsContainer">
 
             <div class="question-card question-step active" id="step-1">
-                <h5 class="question-title">1. Zenbat kreditu ditu Gradu Amaierako Lanak?</h5>
-                <label class="ios-radio-option"><input type="radio" name="q1" value="a"> 6 kreditu</label>
-                <label class="ios-radio-option"><input type="radio" name="q1" value="b"> 9 kreditu</label>
-                <label class="ios-radio-option"><input type="radio" name="q1" value="c"> 12 kreditu</label>
+                <h5 class="question-title" data-i18n="quiz_q1">1. Zenbat kreditu ditu Gradu Amaierako Lanak?</h5>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q1" value="a"> <span data-i18n="quiz_q1_a">6 kreditu</span>
+                </label>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q1" value="b"> <span data-i18n="quiz_q1_b">9 kreditu</span>
+                </label>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q1" value="c"> <span data-i18n="quiz_q1_c">12 kreditu</span>
+                </label>
                 <div id="res1" class="result-label"></div>
             </div>
 
             <div class="question-card question-step" id="step-2">
-                <h5 class="question-title">2. Zein da GrADU Amaierako Lanaren helburua?</h5>
-                <label class="ios-radio-option"><input type="radio" name="q2" value="a"> Ikaslearen prestakuntzaren erakusgarri izan daiteke</label>
-                <label class="ios-radio-option"><input type="radio" name="q2" value="b"> Ikaslearen gaitasun profesionalak erakustea</label>
-                <label class="ios-radio-option"><input type="radio" name="q2" value="c"> Biak zuzenak dira</label>
+                <h5 class="question-title" data-i18n="quiz_q2">2. Zein da Gradu Amaierako Lanaren helburua?</h5>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q2" value="a"> <span data-i18n="quiz_q2_a">Ikaslearen prestakuntzaren erakusgarri izan daiteke</span>
+                </label>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q2" value="b"> <span data-i18n="quiz_q2_b">Ikaslearen gaitasun profesionalak erakustea</span>
+                </label>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q2" value="c"> <span data-i18n="quiz_q2_c">Biak zuzenak dira</span>
+                </label>
                 <div id="res2" class="result-label"></div>
             </div>
 
             <div class="question-card question-step" id="step-3">
-                <h5 class="question-title">3. Noiz aurkeztu behar da Gradu Amaierako Lana egiteko eskaera?</h5>
-                <label class="ios-radio-option"><input type="radio" name="q3" value="a"> Lehen hiruhilekoan</label>
-                <label class="ios-radio-option"><input type="radio" name="q3" value="b"> Ikasturteko lehen zortzi asteetan</label>
-                <label class="ios-radio-option"><input type="radio" name="q3" value="c"> Edozein momentutan</label>
+                <h5 class="question-title" data-i18n="quiz_q3">3. Noiz aurkeztu behar da Gradu Amaierako Lana egiteko eskaera?</h5>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q3" value="a"> <span data-i18n="quiz_q3_a">Lehen hiruhilekoan</span>
+                </label>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q3" value="b"> <span data-i18n="quiz_q3_b">Ikasturteko lehen zortzi asteetan</span>
+                </label>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q3" value="c"> <span data-i18n="quiz_q3_c">Edozein momentutan</span>
+                </label>
                 <div id="res3" class="result-label"></div>
             </div>
 
             <div class="question-card question-step" id="step-4">
-                <h5 class="question-title">4. Zenbat deialditara aurkeztu daiteke Gradu Amaierako Lana ikasturte bakoitzeko?</h5>
-                <label class="ios-radio-option"><input type="radio" name="q4" value="a"> 2 deialditara</label>
-                <label class="ios-radio-option"><input type="radio" name="q4" value="b"> 3 deialditara</label>
-                <label class="ios-radio-option"><input type="radio" name="q4" value="c"> 4 deialditara</label>
+                <h5 class="question-title" data-i18n="quiz_q4">4. Zenbat deialditara aurkeztu daiteke Gradu Amaierako Lana ikasturte bakoitzeko?</h5>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q4" value="a"> <span data-i18n="quiz_q4_a">2 deialditara</span>
+                </label>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q4" value="b"> <span data-i18n="quiz_q4_b">3 deialditara</span>
+                </label>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q4" value="c"> <span data-i18n="quiz_q4_c">4 deialditara</span>
+                </label>
                 <div id="res4" class="result-label"></div>
             </div>
 
             <div class="question-card question-step" id="step-5">
-                <h5 class="question-title">5. Nork zuzentzen du Gradu Amaierako Lana?</h5>
-                <label class="ios-radio-option"><input type="radio" name="q5" value="a"> Fakultateko edozein irakasleren batek</label>
-                <label class="ios-radio-option"><input type="radio" name="q5" value="b"> Tituluari lotutako irakasle edo ikertzaile batek</label>
-                <label class="ios-radio-option"><input type="radio" name="q5" value="c"> Kanpoko profesional batek</label>
+                <h5 class="question-title" data-i18n="quiz_q5">5. Nork zuzentzen du Gradu Amaierako Lana?</h5>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q5" value="a"> <span data-i18n="quiz_q5_a">Fakultateko edozein irakasleren batek</span>
+                </label>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q5" value="b"> <span data-i18n="quiz_q5_b">Tituluari lotutako irakasle edo ikertzaile batek</span>
+                </label>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q5" value="c"> <span data-i18n="quiz_q5_c">Kanpoko profesional batek</span>
+                </label>
                 <div id="res5" class="result-label"></div>
             </div>
 
             <div class="question-card question-step" id="step-6">
-                <h5 class="question-title">6. Zer dokumentu entregatu behar da Gradu Amaierako Lana aurkezteko?</h5>
-                <label class="ios-radio-option"><input type="radio" name="q6" value="a"> Memoria idatzia soilik</label>
-                <label class="ios-radio-option"><input type="radio" name="q6" value="b"> Memoria idatzia eta aurkezpen bat</label>
-                <label class="ios-radio-option"><input type="radio" name="q6" value="c"> Proiektu praktikoa soilik</label>
+                <h5 class="question-title" data-i18n="quiz_q6">6. Zer dokumentu entregatu behar da Gradu Amaierako Lana aurkezteko?</h5>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q6" value="a"> <span data-i18n="quiz_q6_a">Memoria idatzia soilik</span>
+                </label>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q6" value="b"> <span data-i18n="quiz_q6_b">Memoria idatzia eta aurkezpen bat</span>
+                </label>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q6" value="c"> <span data-i18n="quiz_q6_c">Proiektu praktikoa soilik</span>
+                </label>
                 <div id="res6" class="result-label"></div>
             </div>
 
             <div class="question-card question-step" id="step-7">
-                <h5 class="question-title">7. Zenbat pertsonak osatzen dute ebaluazio batzordea?</h5>
-                <label class="ios-radio-option"><input type="radio" name="q7" value="a"> 2 pertsonak</label>
-                <label class="ios-radio-option"><input type="radio" name="q7" value="b"> 3 pertsonak</label>
-                <label class="ios-radio-option"><input type="radio" name="q7" value="c"> 5 pertsonak</label>
+                <h5 class="question-title" data-i18n="quiz_q7">7. Zenbat pertsonak osatzen dute ebaluazio batzordea?</h5>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q7" value="a"> <span data-i18n="quiz_q7_a">2 pertsonak</span>
+                </label>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q7" value="b"> <span data-i18n="quiz_q7_b">3 pertsonak</span>
+                </label>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q7" value="c"> <span data-i18n="quiz_q7_c">5 pertsonak</span>
+                </label>
                 <div id="res7" class="result-label"></div>
             </div>
 
             <div class="question-card question-step" id="step-8">
-                <h5 class="question-title">8. Zenbat denbora izan dezake ikasle batek Gradu Amaierako Lana defendatzeko?</h5>
-                <label class="ios-radio-option"><input type="radio" name="q8" value="a"> 10 minutu</label>
-                <label class="ios-radio-option"><input type="radio" name="q8" value="b"> 15-20 minutu</label>
-                <label class="ios-radio-option"><input type="radio" name="q8" value="c"> 30 minutu</label>
+                <h5 class="question-title" data-i18n="quiz_q8">8. Zenbat denbora izan dezake ikasle batek Gradu Amaierako Lana defendatzeko?</h5>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q8" value="a"> <span data-i18n="quiz_q8_a">10 minutu</span>
+                </label>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q8" value="b"> <span data-i18n="quiz_q8_b">15-20 minutu</span>
+                </label>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q8" value="c"> <span data-i18n="quiz_q8_c">30 minutu</span>
+                </label>
                 <div id="res8" class="result-label"></div>
             </div>
 
             <div class="question-card question-step" id="step-9">
-                <h5 class="question-title">9. Zer ikastaro mota dago Gradu Amaierako Lanean?</h5>
-                <label class="ios-radio-option"><input type="radio" name="q9" value="a"> Software Ingeniaritza</label>
-                <label class="ios-radio-option"><input type="radio" name="q9" value="b"> Hardwarea</label>
-                <label class="ios-radio-option"><input type="radio" name="q9" value="c"> Biak zuzenak dira</label>
+                <h5 class="question-title" data-i18n="quiz_q9">9. Zer ikastaro mota dago Gradu Amaierako Lanean?</h5>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q9" value="a"> <span data-i18n="quiz_q9_a">Software Ingeniaritza</span>
+                </label>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q9" value="b"> <span data-i18n="quiz_q9_b">Hardwarea</span>
+                </label>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q9" value="c"> <span data-i18n="quiz_q9_c">Biak zuzenak dira</span>
+                </label>
                 <div id="res9" class="result-label"></div>
             </div>
 
             <div class="question-card question-step" id="step-10">
-                <h5 class="question-title">10. Non argitaratzen da Gradu Amaierako Lana?</h5>
-                <label class="ios-radio-option"><input type="radio" name="q10" value="a"> ADDI biltegian</label>
-                <label class="ios-radio-option"><input type="radio" name="q10" value="b"> Fakultateko webgunean</label>
-                <label class="ios-radio-option"><input type="radio" name="q10" value="c"> Ez da argitaratzen</label>
+                <h5 class="question-title" data-i18n="quiz_q10">10. Non argitaratzen da Gradu Amaierako Lana?</h5>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q10" value="a"> <span data-i18n="quiz_q10_a">ADDI biltegian</span>
+                </label>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q10" value="b"> <span data-i18n="quiz_q10_b">Fakultateko webgunean</span>
+                </label>
+                <label class="ios-radio-option">
+                    <input type="radio" name="q10" value="c"> <span data-i18n="quiz_q10_c">Ez da argitaratzen</span>
+                </label>
                 <div id="res10" class="result-label"></div>
             </div>
 
@@ -128,32 +187,35 @@
 
         <div class="quiz-navigation">
             <button type="button" id="prevBtn" class="btn-ios-secondary" onclick="changeStep(-1)" disabled>
-                <i class="bi bi-arrow-left"></i> Aurrekoa
+                <i class="bi bi-arrow-left"></i> <span data-i18n="quiz_btn_prev">Aurrekoa</span>
             </button>
 
             <button type="button" id="nextBtn" class="btn-ios-primary" onclick="changeStep(1)">
-                Hurrengoa <i class="bi bi-arrow-right"></i>
+                <span data-i18n="quiz_btn_next">Hurrengoa</span> <i class="bi bi-arrow-right"></i>
             </button>
 
             <button type="submit" id="submitBtn" class="btn-ios-primary" style="display: none;">
-                Bidali <i class="bi bi-send-fill ms-2"></i>
+                <span data-i18n="quiz_btn_submit">Bidali</span> <i class="bi bi-send-fill ms-2"></i>
             </button>
         </div>
 
     </form>
 </main>
 
-<div id="toastMsg" class="toast-validation" style="display: none;">
-    <i class="bi bi-exclamation-circle-fill"></i> Aukeratu erantzun bat jarraitzeko
+<div id="toastMsg" class="toast-validation" style="z-index: 99999;">
+    <i class="bi bi-exclamation-circle-fill text-warning"></i>
+    <span data-i18n="quiz_toast_error">Aukeratu erantzun bat jarraitzeko</span>
 </div>
 
 <div class="container text-center mb-5">
     <a href="index.html" class="btn-ios-back">
-        <i class="bi bi-arrow-left me-2"></i>Hasierara itzuli
+        <i class="bi bi-arrow-left me-2"></i><span data-i18n="btn_back_home">Hasierara itzuli</span>
     </a>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="i18n.js"></script>
+<script src="theme.js"></script>
 <script src="menu.js"></script>
 
 <script>
@@ -169,6 +231,7 @@
     const submitBtn = document.getElementById('submitBtn');
     const toastMsg = document.getElementById('toastMsg');
     const resultBox = document.getElementById('result');
+    const navButtons = document.querySelector('.quiz-navigation');
 
     // Correct Answers
     const correctAnswers = {
@@ -211,16 +274,40 @@
                 return;
             }
         }
-
         currentStep += direction;
         showStep(currentStep);
     }
 
+    // La función showToast() DEBE verse así:
     function showToast() {
-        toastMsg.style.display = 'flex';
+        const toast = document.getElementById('toastMsg');
+        toast.classList.add('active');
         setTimeout(() => {
-            toastMsg.style.display = 'none';
-        }, 2000); // Se oculta a los 2 segundos
+            toast.classList.remove('active');
+        }, 3000);
+    }
+
+    // --- NUEVA FUNCIÓN: REINICIAR CUESTIONARIO ---
+    function resetQuiz() {
+        // 1. Resetear variables
+        currentStep = 1;
+
+        // 2. Limpiar formulario (inputs)
+        form.reset();
+
+        // 3. Ocultar resultados y mostrar navegación
+        resultBox.style.display = 'none';
+        navButtons.style.display = 'flex';
+
+        // 4. Limpiar estilos de validación (colores rojo/verde)
+        document.querySelectorAll('.result-label').forEach(el => {
+            el.style.display = 'none';
+            el.className = 'result-label'; // Quitar clases correct/incorrect
+            el.innerHTML = '';
+        });
+
+        // 5. Volver al paso 1
+        showStep(1);
     }
 
     // FORM SUBMIT
@@ -246,28 +333,53 @@
 
             if (selected && selected.value === correctAnswers[`q${i}`]) {
                 score++;
-                res.innerHTML = '<i class="bi bi-check-circle-fill me-2"></i>Zuzena';
+                res.innerHTML = '<i class="bi bi-check-circle-fill me-2"></i><span data-i18n="quiz_result_correct">Zuzena</span>';
                 res.className = 'result-label result-correct fade-in';
             } else {
-                res.innerHTML = '<i class="bi bi-x-circle-fill me-2"></i>Okerra (Zuzena: ' + getCorrectAnswerText(i, correctAnswers[`q${i}`]) + ')';
+                let correctText = getCorrectAnswerText(i, correctAnswers[`q${i}`]);
+                res.innerHTML = '<i class="bi bi-x-circle-fill me-2"></i><span data-i18n="quiz_result_incorrect">Okerra (Zuzena: )</span> ' + correctText;
                 res.className = 'result-label result-incorrect fade-in';
             }
         }
 
         // Ocultar navegación
-        document.querySelector('.quiz-navigation').style.display = 'none';
+        navButtons.style.display = 'none';
 
         // Mostrar Resultado Final
         resultBox.style.display = 'block';
+
+        let titleKey, classType, icon;
         if (score >= 7) {
-            resultBox.className = 'alert alert-success text-center fade-in glass-card';
-            resultBox.innerHTML = `<h4 class="alert-heading text-success"><i class="bi bi-trophy-fill me-2"></i>Zorionak!</h4><p class="mb-0">Zure emaitza: <strong>${score} / ${totalSteps}</strong>.</p>`;
+            titleKey = "quiz_final_perfect";
+            classType = "alert-success";
+            icon = "trophy-fill";
         } else if (score >= 5) {
-            resultBox.className = 'alert alert-warning text-center fade-in glass-card';
-            resultBox.innerHTML = `<h4 class="alert-heading text-warning"><i class="bi bi-emoji-smile-fill me-2"></i>Ez dago gaizki!</h4><p class="mb-0">Zure emaitza: <strong>${score} / ${totalSteps}</strong>.</p>`;
+            titleKey = "quiz_final_good";
+            classType = "alert-warning";
+            icon = "emoji-smile-fill";
         } else {
-            resultBox.className = 'alert alert-danger text-center fade-in glass-card';
-            resultBox.innerHTML = `<h4 class="alert-heading text-danger"><i class="bi bi-emoji-frown-fill me-2"></i>Hobetu beharra!</h4><p class="mb-0">Zure emaitza: <strong>${score} / ${totalSteps}</strong>.</p>`;
+            titleKey = "quiz_final_bad";
+            classType = "alert-danger";
+            icon = "emoji-frown-fill";
+        }
+
+        // Inyectamos el HTML del resultado + EL BOTÓN DE REINTENTAR
+        resultBox.className = `alert ${classType} text-center fade-in glass-card`;
+        resultBox.innerHTML = `
+            <h4 class="alert-heading mb-3"><i class="bi bi-${icon} me-2"></i><span data-i18n="${titleKey}"></span></h4>
+            <p class="mb-4 fs-5"><span data-i18n="quiz_your_score">Zure emaitza:</span> <strong>${score} / ${totalSteps}</strong>.</p>
+
+            <hr>
+
+            <button onclick="resetQuiz()" class="btn-ios-primary mt-2">
+                <i class="bi bi-arrow-counterclockwise me-2"></i>
+                <span data-i18n="quiz_btn_retry">Volver a intentar</span>
+            </button>
+        `;
+
+        // RE-TRADUCIR PARA QUE APAREZCAN LOS TEXTOS INYECTADOS
+        if (typeof translatePage === "function" && localStorage.getItem('lang')) {
+            translatePage(localStorage.getItem('lang'));
         }
 
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -275,7 +387,7 @@
 
     function getCorrectAnswerText(questionNum, answerValue) {
         const input = form.querySelector(`input[name="q${questionNum}"][value="${answerValue}"]`);
-        return input ? input.closest('label').textContent.trim() : '';
+        return input ? input.closest('label').querySelector('span').textContent.trim() : '';
     }
 
     // Inicializar

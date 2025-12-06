@@ -31,6 +31,7 @@
     "title_regulation": "Reglamento",
     "subtitle_regulation": "Regulación y claves del Proyecto Fin de Grado.",
     "title_quiz": "Cuestionario",
+    "subtitle_quiz": "Pon a prueba tus conocimientos con un test interactivo rápido.",
     "title_memories": "Memorias",
     "subtitle_memories": "Inspírate con trabajos excelentes",
     "title_team": "Nuestro Equipo",
@@ -167,7 +168,9 @@
     "role_developer": "Desarrollador",
     "role_design": "Diseño",
     "role_content": "Contenidos",
-    "role_comms": "Comunicación"
+    "role_comms": "Comunicación",
+    "msg_daltonic_on": "Ayuda Daltonismo: Activada",
+    "msg_daltonic_off": "Ayuda Daltonismo: Desactivada"
   },
   "eu": {
     "msg_daltonic_active": "Modu Daltonikoa Aktibatuta",
@@ -201,6 +204,7 @@
     "title_regulation": "Araudia",
     "subtitle_regulation": "Gradu Amaierako Lanaren arautegia eta gakoak.",
     "title_quiz": "Galdetegia",
+    "subtitle_quiz": "Probatu zure ezagutza test interaktibo azkar batekin.",
     "title_memories": "Memoriak",
     "subtitle_memories": "Inspiratu zaitez aurreko ikasleen lan bikainekin",
     "title_team": "Gure Taldea",
@@ -337,7 +341,9 @@
     "role_developer": "Garatzailea",
     "role_design": "Diseinua",
     "role_content": "Edukiak",
-    "role_comms": "Komunikazioa"
+    "role_comms": "Komunikazioa",
+    "msg_daltonic_on": "Daltonismo Laguntza: Piztuta",
+    "msg_daltonic_off": "Daltonismo Laguntza: Itzalita"
   },
   "en": {
     "nav_home": "Home",
@@ -370,6 +376,7 @@
     "title_regulation": "Regulations",
     "subtitle_regulation": "Regulation and keys of the Final Degree Project.",
     "title_quiz": "Quiz",
+    "subtitle_quiz": "Test your knowledge with a quick interactive quiz.",
     "title_memories": "Memories",
     "subtitle_memories": "Get inspired by previous excellent works",
     "title_team": "Our Team",
@@ -377,7 +384,7 @@
     "btn_back_home": "Back to Home",
     "lang_selector": "Language:",
     "selector_call": "Select Call:",
-    "title_faculty": "Faculty Website",
+    "title_faculty": "Facu  lty Website",
     "subtitle_faculty": "Official information or administrative procedures, consult the source directly.",
     "btn_full_regulation": "Full Regulation",
     "btn_summary_regulation": "Summary",
@@ -507,7 +514,9 @@
     "role_design": "Design",
     "role_content": "Content",
     "role_comms": "Communication",
-    "msg_daltonic_active": "Colorblind Mode On"
+    "msg_daltonic_active": "Colorblind Mode On",
+    "msg_daltonic_on": "Colorblind Help: Enabled",
+    "msg_daltonic_off": "Colorblind Help: Disabled"
   },
   "fr": {
     "nav_home": "Accueil",
@@ -541,6 +550,7 @@
     "title_regulation": "Règlement",
     "subtitle_regulation": "Règlementation et clés du Projet de Fin d'Études.",
     "title_quiz": "Quiz",
+    "subtitle_quiz": "Testez vos connaissances avec un quiz interactif rapide.",
     "title_memories": "Mémoires",
     "subtitle_memories": "Inspirez-vous d'excellents travaux précédents",
     "title_team": "Notre Équipe",
@@ -677,7 +687,9 @@
     "role_developer": "Développeur",
     "role_design": "Design",
     "role_content": "Contenus",
-    "role_comms": "Communication"
+    "role_comms": "Communication",
+    "msg_daltonic_on": "Aide Daltonisme : Activée",
+    "msg_daltonic_off": "Aide Daltonisme : Désactivée"
   },
   "de": {
     "nav_home": "Startseite",
@@ -710,6 +722,7 @@
     "title_regulation": "Vorschriften",
     "subtitle_regulation": "Regelung und Schlüssel der Bachelorarbeit.",
     "title_quiz": "Quiz",
+    "subtitle_quiz": "Testen Sie Ihr Wissen mit einem schnellen interaktiven Quiz.",
     "title_memories": "Abschlussarbeiten",
     "subtitle_memories": "Lassen Sie sich von exzellenten früheren Arbeiten inspirieren",
     "title_team": "Unser Team",
@@ -847,7 +860,9 @@
     "role_developer": "Entwickler",
     "role_design": "Design",
     "role_content": "Inhalte",
-    "role_comms": "Kommunikation"
+    "role_comms": "Kommunikation",
+    "msg_daltonic_on": "Farbblind-Hilfe: Aktiviert",
+    "msg_daltonic_off": "Farbblind-Hilfe: Deaktiviert"
   },
   "it": {
     "nav_home": "Home",
@@ -881,6 +896,7 @@
     "title_regulation": "Regolamento",
     "subtitle_regulation": "Regolamentazione e chiavi del Progetto Finale di Laurea.",
     "title_quiz": "Quiz",
+    "subtitle_quiz": "Metti alla prova le tue conoscenze con un rapido quiz interattivo.",
     "title_memories": "Tesi",
     "subtitle_memories": "Lasciati ispirare da eccellenti lavori precedenti",
     "title_team": "Il Nostro Team",
@@ -1017,7 +1033,9 @@
     "role_developer": "Sviluppatore",
     "role_design": "Design",
     "role_content": "Contenuti",
-    "role_comms": "Comunicazione"
+    "role_comms": "Comunicazione",
+    "msg_daltonic_on": "Aiuto Daltonismo: Attivato",
+    "msg_daltonic_off": "Aiuto Daltonismo: Disattivato"
   },
   "pt": {
     "nav_home": "Início",
@@ -1050,6 +1068,7 @@
     "title_regulation": "Regulamento",
     "subtitle_regulation": "Regulação e chaves do Projeto Final de Curso.",
     "title_quiz": "Quiz",
+    "subtitle_quiz": "Teste seus conhecimentos com um quiz interativo rápido.",
     "title_memories": "Memórias",
     "subtitle_memories": "Inspire-se com excelentes trabalhos anteriores",
     "title_team": "Nossa Equipe",
@@ -1187,7 +1206,9 @@
     "role_developer": "Desenvolvedor",
     "role_design": "Design",
     "role_content": "Conteúdos",
-    "role_comms": "Comunicação"
+    "role_comms": "Comunicação",
+    "msg_daltonic_on": "Ajuda Daltonismo: Ativada",
+    "msg_daltonic_off": "Ajuda Daltonismo: Desativada"
   },
   "zh": {
     "nav_home": "首页",
@@ -1220,6 +1241,7 @@
     "title_regulation": "规定",
     "subtitle_regulation": "毕业设计项目的规定和关键。",
     "title_quiz": "测验",
+    "subtitle_quiz": "通过快速互动测验测试您的知识。",
     "title_memories": "论文",
     "subtitle_memories": "从以前的优秀作品中获得灵感",
     "title_team": "我们的团队",
@@ -1357,6 +1379,8 @@
     "role_developer": "开发人员",
     "role_design": "设计",
     "role_content": "内容",
-    "role_comms": "通讯"
+    "role_comms": "通讯",
+    "msg_daltonic_on": "色盲辅助：已开启",
+    "msg_daltonic_off": "色盲辅助：已关闭"
   }
 }

@@ -6,8 +6,8 @@
 :root {
     /* --- Kolore Paleta "Neo-Academic" (LIGHT MODE) --- */
     --bg-page: #f2f4f8;       /* Fondo claro */
-    --text-primary: #050505;  /* Texto oscuro (Base) */
-    --text-secondary: #52525b; /* Subtítulos */
+    --text-primary: #050505;  /* Texto oscuro (Base - antes text-ink) */
+    --text-secondary: #52525b; /* Subtítulos (antes text-lead) */
     --brand-blue: #0066ff;    /* Azul de marca */
 
     /* Superficies */
@@ -33,20 +33,13 @@
     --c-red: #ff3b30; --bg-red: rgba(255, 59, 48, 0.1);
 }
 
-/* Aplicación de tema en elementos base (usando las nuevas variables) */
-body {
-    background-color: var(--bg-page);
-    color: var(--text-primary);
-    /* ... (El resto de body y los keyframes se mantienen) ... */
-}
-
 /* =========================================
    2. ESZENA NAGUSIA (BACKGROUND ALIVE)
    ========================================= */
 body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background-color: var(--bg-deep);
-    color: var(--text-ink);
+    background-color: var(--bg-page); /* Corregido para usar la variable definida */
+    color: var(--text-primary); /* Corregido para usar la variable definida */
     margin: 0; padding: 0;
     overflow-x: hidden;
     padding-top: 60px; /* Navbarrentzako lekua */
@@ -96,7 +89,7 @@ html::after {
 
 /* Logo indartsua */
 .ios-brand {
-    font-weight: 900; font-size: 1.4rem; color: var(--text-ink) !important;
+    font-weight: 900; font-size: 1.4rem; color: var(--text-primary) !important;
     letter-spacing: -0.8px; display: flex; align-items: center; gap: 10px;
 }
 .ios-brand i {
@@ -108,7 +101,7 @@ html::after {
 }
 
 .ios-nav-link {
-    color: var(--text-lead) !important; font-weight: 600; font-size: 0.9rem;
+    color: var(--text-secondary) !important; font-weight: 600; font-size: 0.9rem;
     padding: 8px 18px !important; border-radius: 12px; margin: 0 4px;
     display: flex; align-items: center; gap: 6px; position: relative;
     transition: all 0.2s var(--smooth-flow);
@@ -122,7 +115,7 @@ html::after {
 
 /* Aktibo: Pilula beltza (oso modernoa) */
 .ios-nav-link.active {
-    background: var(--text-ink); color: #fff !important;
+    background: var(--text-primary); color: #fff !important;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     transform: scale(1.02);
 }
@@ -150,7 +143,7 @@ html::after {
     letter-spacing: -2px; /* Letrak elkarrengana hurbildu (estilo modernoa) */
     margin-bottom: 0.4rem;
 
-    color: var(--text-ink);
+    color: var(--text-primary);
     /* Testuaren distira sotila */
     text-shadow: 0 20px 40px rgba(0,0,0,0.1);
 
@@ -158,7 +151,7 @@ html::after {
 }
 
 .hero-subtitle, .page-header .lead {
-    font-size: 1.15rem; color: var(--text-lead) !important; font-weight: 500;
+    font-size: 1.15rem; color: var(--text-secondary) !important; font-weight: 500;
     max-width: 600px; margin: 0 auto; letter-spacing: -0.3px;
     animation: fadeIn 1s ease 0.2s backwards;
 }
@@ -225,8 +218,8 @@ html::after {
     transform: scale(1.2) rotate(-8deg);
 }
 
-.bento-title { font-size: 1.4rem; font-weight: 800; color: var(--text-ink); margin-bottom: 0.4rem; letter-spacing: -0.5px; }
-.bento-text { font-size: 0.95rem; color: var(--text-lead); line-height: 1.5; margin: 0; font-weight: 500; }
+.bento-title { font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.4rem; letter-spacing: -0.5px; }
+.bento-text { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5; margin: 0; font-weight: 500; }
 
 .bento-card.wide { flex-direction: row; text-align: left; gap: 2rem; padding: 2.5rem; align-items: center; }
 .bento-card.wide .bento-icon { margin-bottom: 0; font-size: 2.8rem; }
@@ -239,7 +232,7 @@ html::after {
 
 .modern-table thead th {
     background: #f8fafc;
-    color: var(--text-lead); font-weight: 700; text-transform: uppercase; font-size: 0.75rem;
+    color: var(--text-secondary); font-weight: 700; text-transform: uppercase; font-size: 0.75rem;
     letter-spacing: 1.5px; padding: 1.4rem; border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
@@ -287,7 +280,7 @@ tr:hover .icon-circle { transform: scale(1.15) rotate(5deg); }
     border: 1px solid #fcd34d; font-weight: 600;
 }
 .alert-custom-secondary {
-    background: #f8fafc; color: var(--text-lead); border-radius: 16px; padding: 1.5rem;
+    background: #f8fafc; color: var(--text-secondary); border-radius: 16px; padding: 1.5rem;
     border: 1px solid rgba(0,0,0,0.05);
 }
 
@@ -302,7 +295,7 @@ tr:hover .icon-circle { transform: scale(1.15) rotate(5deg); }
 }
 .segment-btn {
     background: transparent; border: none; padding: 10px 30px;
-    font-weight: 600; color: var(--text-lead); border-radius: 9px; transition: 0.3s var(--spring-bounce);
+    font-weight: 600; color: var(--text-secondary); border-radius: 9px; transition: 0.3s var(--spring-bounce);
 }
 .segment-btn.active {
     background: #fff; color: #000; font-weight: 700;
@@ -320,7 +313,7 @@ tr:hover .icon-circle { transform: scale(1.15) rotate(5deg); }
 
 .article-block { border-bottom: 1px solid rgba(0,0,0,0.08); padding-bottom: 1.8rem; margin-bottom: 1.8rem; }
 .article-number { color: var(--brand-blue); font-weight: 900; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 8px; display: block; letter-spacing: 1px; }
-.article-title-text { font-size: 1.4rem; font-weight: 800; margin-bottom: 0.6rem; color: var(--text-ink); }
+.article-title-text { font-size: 1.4rem; font-weight: 800; margin-bottom: 0.6rem; color: var(--text-primary); }
 
 .limited-text { max-height: 400px; overflow: hidden; position: relative; transition: max-height 0.6s var(--smooth-flow); }
 .fade-overlay {
@@ -369,7 +362,7 @@ tr:hover .icon-circle { transform: scale(1.15) rotate(5deg); }
 
 /* Botoi nagusia */
 .btn-ios-primary {
-    background: var(--text-ink); color: white; border: none;
+    background: var(--text-primary); color: white; border: none;
     padding: 16px 40px; border-radius: 50px; font-weight: 700; font-size: 1rem;
     box-shadow: 0 8px 25px rgba(0,0,0,0.25); transition: 0.3s var(--spring-bounce);
 }
@@ -377,7 +370,7 @@ tr:hover .icon-circle { transform: scale(1.15) rotate(5deg); }
 
 /* Botoi sekundarioa */
 .btn-ios-secondary {
-    background: rgba(0,0,0,0.06); color: var(--text-ink); border: none;
+    background: rgba(0,0,0,0.06); color: var(--text-primary); border: none;
     padding: 16px 30px; border-radius: 50px; font-weight: 600; transition: 0.3s;
 }
 .btn-ios-secondary:hover:not(:disabled) { background: rgba(0,0,0,0.12); transform: translateY(-2px); }
@@ -387,15 +380,14 @@ tr:hover .icon-circle { transform: scale(1.15) rotate(5deg); }
 .result-incorrect { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
 
 /* =========================================
-   TOAST DE ERROR (SOLUCIÓN MÁS ROBUSTA: FIJO)
+   TOAST DE ERROR (ARREGLADO: POSICIÓN FIJA)
    ========================================= */
 .toast-validation {
-    position: fixed;
-    bottom: 30px;       /* Distancia fija al borde inferior */
-    right: 30px;        /* Distancia fija al borde derecho */
-    z-index: 10000;     /* Z-index EXTREMADAMENTE ALTO */
+    position: fixed;      /* Fijo en pantalla, ignorando el contenedor */
+    bottom: 30px;
+    right: 30px;
+    z-index: 20000;       /* Z-index muy alto para estar sobre todo */
 
-    /* Estilos visuales */
     background: rgba(29, 29, 31, 0.95);
     backdrop-filter: blur(10px);
     color: white;
@@ -404,21 +396,19 @@ tr:hover .icon-circle { transform: scale(1.15) rotate(5deg); }
     font-weight: 600;
     box-shadow: 0 10px 40px rgba(0,0,0,0.3);
 
-    /* ESTADO BASE: Oculto y animado */
+    /* Estado Oculto */
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: flex; align-items: center; gap: 10px;
 }
 
 .toast-validation.active {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0); /* Posición final */
+    transform: translateY(0);
 }
 
 /* =========================================
@@ -479,7 +469,7 @@ tr:hover .icon-circle { transform: scale(1.15) rotate(5deg); }
 }
 
 .btn-ios-back {
-    display: inline-flex; align-items: center; background: white; color: var(--text-ink);
+    display: inline-flex; align-items: center; background: white; color: var(--text-primary);
     padding: 14px 30px; border-radius: 50px; font-weight: 700;
     box-shadow: 0 5px 15px rgba(0,0,0,0.06); transition: 0.3s var(--spring-bounce);
     border: 1px solid rgba(0,0,0,0.05);
@@ -507,23 +497,15 @@ tr:hover .icon-circle { transform: scale(1.15) rotate(5deg); }
 
 #backToTop {
     position: fixed; bottom: 30px; right: 30px; width: 55px; height: 55px;
-    background: var(--text-ink); border-radius: 50%; display: flex; justify-content: center; align-items: center;
+    background: var(--text-primary); border-radius: 50%; display: flex; justify-content: center; align-items: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3); opacity: 0; pointer-events: none; transition: 0.4s var(--spring-bounce);
     color: #fff; border: none; z-index: 9000; font-size: 1.2rem;
 }
 #backToTop.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
 #backToTop:hover { transform: translateY(-5px) scale(1.1); background: var(--brand-blue); }
 
-.glass-footer { text-align: center; padding: 4rem 0; color: var(--text-lead); opacity: 0.8; font-size: 0.9rem; font-weight: 500; }
+.glass-footer { text-align: center; padding: 4rem 0; color: var(--text-secondary); opacity: 0.8; font-size: 0.9rem; font-weight: 500; }
 
-/* Definiciones por defecto (Light Mode) */
-:root {
-    --bg-page: #f0f2f5;
-    --text-main: #0a0a0a;
-    --card-bg: #ffffff;
-    --card-border: rgba(0, 0, 0, 0.08);
-    /* ... otras variables ... */
-}
 
 /* =========================================
    A. CONTROLES DEL TEMA (INTEGRACIÓN EN NAVBAR)
@@ -531,402 +513,543 @@ tr:hover .icon-circle { transform: scale(1.15) rotate(5deg); }
 
 /* Estilos de la barra contenedora */
 .theme-controls {
-    /* En móvil, los controles suelen ir en la parte superior del menú desplegable */
-    width: 100%;
-    justify-content: flex-start !important;
-    padding: 10px 0;
-    /* Evita que se muestre como un elemento flotante en modo móvil */
-    display: none;
+    width: 100%; justify-content: flex-start !important; padding: 10px 0; display: none;
 }
-
-/* En escritorio, los queremos visibles y flotando a la izquierda de los links */
 @media (min-width: 992px) {
-    .theme-controls {
-        width: auto;
-        display: flex !important;
-        /* Alinea los controles verticalmente al centro */
-        padding: 0;
-    }
-    /* Asegúrate de que el contenedor colapsable justifica el espacio */
-    #navbarNav {
-        justify-content: space-between !important;
-    }
+    .theme-controls { width: auto; display: flex !important; padding: 0; }
+    #navbarNav { justify-content: space-between !important; }
 }
 
-/* Estilo para el selector de idioma */
+/* Selector de Idioma (Estilo Ampliado) */
 #langSelector {
-    border: 1px solid var(--border-subtle);
-    background-color: var(--surface-white);
-    border-radius: 8px;
+    /* Dimensiones */
+    min-width: 140px; /* Más ancho para que quepan nombres largos como 'Português' */
+    padding: 8px 30px 8px 15px; /* Padding extra a la derecha para la flecha */
+
+    /* Estética */
+    border: 1px solid var(--border-light);
+    background-color: var(--surface-main);
     color: var(--text-primary);
-    font-size: 0.85rem;
-    padding: 6px 8px;
-    font-weight: 500;
-    box-shadow: none;
-    transition: all 0.2s;
-}
-#langSelector:focus {
-    box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.2);
-    border-color: var(--brand-blue);
-}
 
-
-/* Estilo de los botones de modo */
-.btn-theme-toggle, .btn-daltonic-toggle {
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
-    padding: 0;
-    border: none;
-    background: var(--surface-white);
-    color: var(--text-main);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    transition: all 0.2s ease;
     font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-weight: 600;
+    border-radius: 12px; /* Más redondeado */
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
+    /* Comportamiento */
+    appearance: none; /* Quitamos la flecha por defecto del navegador */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px 12px;
+
+    transition: all 0.2s ease;
 }
 
-.btn-theme-toggle:hover, .btn-daltonic-toggle:hover {
-    background: var(--bg-deep);
+#langSelector:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     transform: translateY(-1px);
 }
 
-/* Lógica de los iconos Dark/Light */
-.dark-mode .btn-theme-toggle {
-    background: var(--text-main); /* Botón oscuro en modo oscuro */
-    color: #ffcc00;
+#langSelector:focus {
+    outline: none;
+    border-color: var(--brand-blue);
+    box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.15);
 }
-.dark-icon { display: none; }
-.light-icon { display: inline; }
-.dark-mode .dark-icon { display: inline; }
-.dark-mode .light-icon { display: none; }
+
+/* Adaptación para la flecha en MODO OSCURO (Importante para que se vea) */
+.dark-mode #langSelector {
+    /* Cambiamos la flecha a blanco */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-color: var(--surface-main);
+    color: var(--text-primary);
+    border-color: var(--glass-border);
+}
+/* Estilo de los botones de modo */
+.btn-theme-toggle, .btn-daltonic-toggle {
+    width: 32px; height: 32px; border-radius: 8px; padding: 0; border: none;
+    background: #fff; color: var(--text-primary); box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: all 0.2s ease; font-size: 0.9rem; display: flex; align-items: center; justify-content: center;
+}
+.btn-theme-toggle:hover, .btn-daltonic-toggle:hover { background: #f0f0f0; transform: translateY(-1px); }
+
+/* Lógica de los iconos Dark/Light */
+.dark-mode .btn-theme-toggle { background: var(--text-primary); color: #ffcc00; }
+.dark-icon { display: none; } .light-icon { display: inline; }
+.dark-mode .dark-icon { display: inline; } .dark-mode .light-icon { display: none; }
+
 
 /* =========================================
-   Z. AJUSTES DE MODOS DE VISUALIZACIÓN (MÍNIMO CONTRASTE SEGURO - Texto Fijo)
+   Z. AJUSTES DE MODOS (DARK & DALTONIC)
    ========================================= */
 
 /* --- A. MODO OSCURO (DARK MODE) --- */
 .dark-mode {
-    /* 1. INVERSIÓN DE FONDOS */
-    --bg-page: #181818;       /* Fondo Oscuro Sólido */
-
-    /* 2. TEXTOS: Forzamos el blanco puro */
-    --text-primary: #EDEDED;  /* Texto Principal (Blanco) */
-    --text-secondary: #AAAAAA; /* Texto Secundario (Gris Claro, legible) */
-
-    /* 3. SUPERFICIES */
-    --surface-main: #282828;  /* Fondo de tarjeta sólida y oscura */
-    --surface-sheer: rgba(40, 40, 40, 0.95); /* Navbar/Menú oscuro */
+    --bg-page: #181818;
+    --text-primary: #EDEDED;
+    --text-secondary: #AAAAAA;
+    --surface-main: #282828;
+    --surface-sheer: rgba(40, 40, 40, 0.95);
     --glass-border: rgba(255, 255, 255, 0.15);
 
     background-color: var(--bg-page) !important;
     color: var(--text-primary) !important;
 }
 
-/* 1. ARREGLO CRÍTICO DE TIPOGRAFÍA (Fuerza color claro en todo) */
-.dark-mode .container *,
-.dark-mode .modern-table *,
-.dark-mode .ios-list-item * {
-    color: var(--text-primary) !important;
-}
-
-/* 2. ARREGLO PARA COLORES SECUNDARIOS (Subtítulos y descripciones) */
-.dark-mode .text-secondary,
-.dark-mode .modern-table td .small,
-.dark-mode .article-text,
-.dark-mode .alert-custom-secondary * {
-    color: var(--text-secondary) !important; /* Mantiene el gris claro legible */
-}
-
-/* 3. ARREGLO CRÍTICO: TABLA HOVER */
-.dark-mode .modern-table tbody tr:hover td {
-    background: rgba(79, 172, 254, 0.2) !important; /* Color visible */
-}
-
-/* 4. ARREGLO DE ELEMENTOS DE SUPERFICIE */
-.dark-mode .bento-card,
-.dark-mode .glass-card,
-.dark-mode .table-card,
-.dark-mode .team-member-card {
-    background: var(--surface-main) !important;
-    border-color: var(--glass-border) !important;
-}
-
-/* Final: Menú y Controles */
-.dark-mode .ios-navbar {
-    background: var(--surface-sheer) !important;
-    border-bottom-color: var(--glass-border);
-}
-.dark-mode .btn-theme-toggle,
-.dark-mode .btn-daltonic-toggle,
-.dark-mode #langSelector {
-    background: var(--surface-main);
+/* Regla general de texto claro (menos agresiva) */
+.dark-mode .container *, .dark-mode .ios-list-item * {
     color: var(--text-primary);
-    border-color: var(--glass-border);
 }
 
-/* --- B. MODO DALTÓNICO (ALTO CONTRASTE) --- */
-.daltonic-mode {
-    /* Filtro estándar para simular acromatopsia,
-       convirtiendo todos los colores a tonos de gris.
-       Esto ayuda a que solo los textos se usen para diferenciar.
-    */
-    filter: grayscale(100%) contrast(1.1);
-
-    /* Variables de color clave para colores semánticos (para evitar que se pierdan con el filtro) */
-    --c-blue: #0000ff; /* Azul puro */
-    --c-indigo: #800080; /* Púrpura */
-    --c-green: #008000; /* Verde puro */
-    --c-orange: #ffa500; /* Naranja */
-    --c-red: #ff0000; /* Rojo puro */
-
-    /* La clave es: NO inviertes el fondo, solo ajustas colores que puedan confundir */
-}
-
-/* Si quieres que los colores de acento se noten más, puedes usar esta regla: */
-.daltonic-mode .bento-icon,
-.daltonic-mode .ios-brand i,
-.daltonic-mode .progress-bar-ios {
-    /* Deshace la escala de grises para los elementos de acento clave */
-    filter: none;
-}
-
-/* =========================================
-   NABIGAZIOA - CORRECCIÓN DE ENLACE ACTIVO
-   ========================================= */
-
-/* Modo Claro: Fondo Negro, Letra Blanca */
-.ios-nav-link.active {
-    background: var(--text-primary); /* Negro sólido */
-    color: #fff !important;
-}
-
-/* =========================================
-   Z. AJUSTES DE MODOS DE VISUALIZACIÓN (FINAL Y UNIFICADO)
-   ========================================= */
-
-/* --- A. MODO OSCURO (DARK MODE) --- */
-.dark-mode {
-    /* 1. INVERSIÓN DE FONDOS GENERALES */
-    --bg-page: #121212;       /* Fondo Oscuro Sólido */
-    --text-primary: #EDEDED;  /* Texto Principal (Blanco por defecto) */
-    --text-secondary: #CCCCCC; /* Texto Secundario (Gris Claro) */
-    --surface-main: #1E1E1E;  /* Tarjetas oscuras por defecto */
-    --surface-sheer: rgba(30, 30, 30, 0.95); /* Navbar oscuro */
-    --glass-border: rgba(255, 255, 255, 0.2);
-
-    background-color: var(--bg-page) !important;
-    color: var(--text-primary) !important;
-}
-
-/* --- REGLAS GENERALES DE TEXTO PARA MODO OSCURO --- */
-.dark-mode .container *,
-.dark-mode .ios-list-item *,
-.dark-mode .card-ai *,
-.dark-mode .memory-card h4,
-.dark-mode .memory-card p,
-.dark-mode .bento-title,
-.dark-mode .bento-text {
-    color: var(--text-primary) !important;
-}
-
-.dark-mode .text-muted,
-.dark-mode .text-secondary {
-    color: var(--text-secondary) !important;
-}
-
-/* --- ELEMENTOS DE SUPERFICIE OSCURA (Menú, Bento Cards, Footer) --- */
-.dark-mode .bento-card,
-.dark-mode .glass-card,
-.dark-mode .team-member-card,
-.dark-mode .ios-navbar,
-.dark-mode .btn-theme-toggle,
-.dark-mode .btn-daltonic-toggle,
+/* Elementos de superficie oscura */
+.dark-mode .bento-card, .dark-mode .glass-card, .dark-mode .team-member-card,
+.dark-mode .ios-navbar, .dark-mode .btn-theme-toggle, .dark-mode .btn-daltonic-toggle,
 .dark-mode #langSelector {
     background: var(--surface-main) !important;
-    border-color: var(--glass-border);
+    border-color: var(--glass-border); color: var(--text-primary);
 }
 
-/* ========================================================= */
-/* ZONAS DE "ALTO CONTRASTE" (FONDO CLARO + TEXTO NEGRO)    */
-/* Aplicado a: Tabla Calendario, Quiz Cards, Barra Progreso */
-/* ========================================================= */
-
-/* 1. Definición de fondo claro para zonas de lectura intensiva */
+/* ZONAS DE ALTO CONTRASTE (Fondo Claro + Texto Negro OBLIGATORIO) */
 .dark-mode .modern-table tbody td,
 .dark-mode .question-card,
 .dark-mode .quiz-progress-sticky,
-.dark-mode .ios-radio-option {
-    background: #e5e5e5 !important; /* Gris claro tipo papel */
+.dark-mode .ios-radio-option,
+.dark-mode .ios-segmented-control {
+    background: #e5e5e5 !important;
     border-color: #cccccc;
-    color: #000000 !important;      /* TEXTO NEGRO OBLIGATORIO */
+    color: #000000 !important; /* Texto negro */
 }
 
-/* 2. Forzar texto negro en todos los hijos de estas zonas */
+/* Forzar texto negro en hijos de zonas de alto contraste */
 .dark-mode .modern-table tbody td *,
 .dark-mode .question-card *,
 .dark-mode .quiz-progress-sticky *,
-.dark-mode .ios-radio-option * {
-    color: #000000 !important;
-}
-
-/* 3. Ajustes específicos para el Quiz */
-.dark-mode .question-title {
-    color: #000000 !important;
-    font-weight: 800;
-}
-.dark-mode .quiz-progress-sticky {
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* Sombra para que flote sobre el negro */
-}
-
-/* 4. Ajustes específicos para la Tabla (Calendario) */
-.dark-mode .modern-table thead th {
-    background: #2d2d2d !important; /* Encabezado oscuro */
-    color: #cccccc !important;
-    border-bottom: 1px solid #444;
-}
-
-/* Hover en Tabla (Azul + Texto Negro + Icono Blanco) */
-.dark-mode .modern-table tbody tr:hover td {
-    background: #60a5fa !important; /* Azul vibrante */
-    color: #000000 !important;
-}
-.dark-mode .modern-table tbody tr:hover .icon-circle {
-    background: rgba(0, 0, 0, 0.25) !important;
-    color: #ffffff !important; /* Icono blanco */
-}
-.dark-mode .modern-table tbody tr:hover .icon-circle i {
-    color: #ffffff !important;
-}
-
-/* --- OTROS ELEMENTOS --- */
-
-/* Botón "Volver al inicio" (Fondo oscuro, texto blanco) */
-.dark-mode .btn-ios-back {
-    background: var(--surface-main) !important;
-    color: #ffffff !important;
-    border: 1px solid var(--glass-border);
-}
-
-/* Badge del Año */
-.dark-mode .badge-year {
-    background: rgba(255,255,255,0.05) !important;
-    color: var(--brand-blue) !important;
-    border-color: var(--brand-blue);
-}
-
-/* Enlace Activo Menú */
-.dark-mode .ios-nav-link.active {
-    background: var(--brand-blue) !important;
-    color: #fff !important;
-}
-
-/* Icono Luna Amarilla */
-.dark-mode .btn-theme-toggle .dark-icon {
-    color: #FFD700 !important;
-    display: inline;
-    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
-}
-.dark-mode .btn-theme-toggle .light-icon { display: none; }
-
-/* --- MODO DALTÓNICO --- */
-.daltonic-mode {
-    filter: grayscale(100%) contrast(1.2);
-}
-.daltonic-mode .bento-icon,
-.daltonic-mode .ios-brand,
-.daltonic-mode .progress-bar-ios {
-    filter: none;
-}
-/* ========================================================= */
-/* 5. ARAUDIA SWITCHER (Botones Araudi Osoa / Laburpena)     */
-/* ========================================================= */
-
-/* Contenedor: Fondo gris claro para contraste */
-.dark-mode .ios-segmented-control {
-    background: #e5e5e5 !important;
-    border: 1px solid #999;
-}
-
-/* Botones (Texto): FORZAR NEGRO */
+.dark-mode .ios-radio-option *,
 .dark-mode .segment-btn {
-    color: #000000 !important; /* Letra negra siempre */
-    font-weight: 600;
-}
-
-/* Botón Activo: Fondo Blanco + Letra Negra */
-.dark-mode .segment-btn.active {
-    background: #ffffff !important;
     color: #000000 !important;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-/* ========================================================= */
-/* 6. BOTONES PRIMARIOS (Hurrengoa / Bidali) EN MODO OSCURO  */
-/* ========================================================= */
-
-.dark-mode .btn-ios-primary {
-    background: #ffffff !important; /* Fondo Blanco para destacar */
-    color: #000000 !important;      /* Letra NEGRA (como pediste) */
-    border: none;
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15); /* Resplandor suave blanco */
 }
 
-/* Efecto Hover en modo oscuro */
-.dark-mode .btn-ios-primary:hover {
-    background: #e0e0e0 !important; /* Un poco más gris al pasar el ratón */
-    transform: translateY(-2px);
+/* Ajustes específicos Quiz/Tabla */
+.dark-mode .question-title { color: #000000 !important; font-weight: 800; }
+.dark-mode .modern-table thead th { background: #2d2d2d !important; color: #cccccc !important; border-bottom: 1px solid #444; }
+.dark-mode .modern-table tbody tr:hover td { background: #60a5fa !important; color: #000000 !important; }
+.dark-mode .btn-ios-back { background: var(--surface-main) !important; color: #ffffff !important; border: 1px solid var(--glass-border); }
+.dark-mode .badge-year { background: rgba(255,255,255,0.05) !important; color: var(--brand-blue) !important; border-color: var(--brand-blue); }
+.dark-mode .ios-nav-link.active { background: var(--brand-blue) !important; color: #fff !important; }
+.dark-mode .segment-btn.active { background: #ffffff !important; color: #000000 !important; }
+.dark-mode .btn-theme-toggle .dark-icon { color: #FFD700 !important; display: inline; }
+
+/* --- B. MODO DALTÓNICO --- */
+.daltonic-mode { filter: grayscale(100%) contrast(1.2); }
+.daltonic-mode .bento-icon, .daltonic-mode .ios-brand, .daltonic-mode .progress-bar-ios { filter: none; }
+
+
+/* =========================================
+   CORRECCIÓN DEFINITIVA: BOTÓN SIGUIENTE (HURRENGOA)
+   (Usa máxima especificidad para anular reglas anteriores)
+   ========================================= */
+body.dark-mode .btn-ios-primary,
+body.dark-mode .btn-ios-primary:hover,
+body.dark-mode #nextBtn,
+body.dark-mode #submitBtn {
+    background-color: #ffffff !important; /* Fondo blanco */
+    color: #000000 !important; /* Texto negro PURO */
+    border: 1px solid #cccccc !important;
+}
+
+/* Forzamos a los hijos (span e icono) a ser negros */
+body.dark-mode .btn-ios-primary *,
+body.dark-mode .btn-ios-primary span,
+body.dark-mode .btn-ios-primary i {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
 }
 
 /* =========================================
-   TOAST / MENSAJE DE DALTONISMO (CSS CORREGIDO)
-   ========================================= */
-/* =========================================
-   TOAST DE ERROR (POSICIÓN: A LA DERECHA DEL BOTÓN)
+   A. CONTROLES DEL TEMA (VISIBILIDAD FORZADA)
    ========================================= */
 
-/* El mensaje flotante */
-.toast-validation {
+/* Aseguramos que el Navbar esté POR ENCIMA del fondo y del título */
+.ios-navbar {
+    z-index: 1030 !important; /* Bootstrap fixed-top usa 1030, aseguramos prioridad */
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+/* Contenedor de botones: SIEMPRE VISIBLE (Flex) */
+.theme-controls {
+    display: flex !important; /* Forzar visibilidad */
+    align-items: center;
+    gap: 12px;
+    z-index: 1031; /* Por encima del navbar base */
+}
+
+/* Ajustes para Móvil (Dentro del menú hamburguesa) */
+@media (max-width: 991px) {
+    .theme-controls {
+        width: 100%;
+        justify-content: center; /* Centrado en móvil */
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        margin-bottom: 10px;
+    }
+
+    /* En móvil, el popover debe centrarse */
+    .daltonic-popover {
+        right: auto !important;
+        left: 50% !important;
+        transform: translateX(-50%) translateY(-10px) !important;
+    }
+    .daltonic-popover.show {
+        transform: translateX(-50%) translateY(0) !important;
+    }
+}
+
+/* Ajustes para Escritorio */
+@media (min-width: 992px) {
+    .theme-controls {
+        width: auto;
+        padding: 0;
+        margin-right: 20px;
+    }
+}
+
+/* Asegurar que los botones sean interactivos */
+.btn-theme-toggle, .btn-daltonic-toggle, #langSelector {
+    cursor: pointer !important;
+    pointer-events: auto !important; /* Reactivar clicks si estaban bloqueados */
+    position: relative;
+    z-index: 1032;
+}/* El Menú Flotante (Corrección de Capas) */
+.daltonic-popover {
     position: absolute;
-    top: 50%;       /* Centra verticalmente el mensaje con el botón */
-    left: 100%;     /* CLAVE: Comienza a la derecha del botón */
-    width: max-content;
-    max-width: 180px;
-    background: rgba(30, 30, 30, 0.95);
-    color: white;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    white-space: nowrap;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    z-index: 9999;
+    top: 150%; /* Un poco más separado del botón */
+    right: -50px; /* Ajuste para que no se salga por la derecha */
+    width: 240px;
 
-    /* Estado inicial: Oculto y desplazado 10px a la derecha */
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(30px); /* Más borroso el fondo */
+    -webkit-backdrop-filter: blur(30px);
+
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3); /* Sombra fuerte para destacar */
+    border: 1px solid rgba(0,0,0,0.1);
+
+    padding: 16px;
+    text-align: center;
+
+    /* Z-INDEX CRÍTICO: Debe ser muy alto */
+    z-index: 9999 !important;
+
+    /* Animación */
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-50%) translateX(10px) translate3d(0,0,0); /* Centrado verticalmente y movido 10px */
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    pointer-events: none;
-}
+    transform: translateY(-10px) scale(0.95);
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 
-/* Estado Activo para que se muestre (se mueve 10px a la izquierda, a su posición final) */
-.toast-validation.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(-50%) translateX(0) translate3d(0,0,0); /* Llega a la posición final pegado al botón */
+    /* Permitir clicks dentro del popover */
     pointer-events: auto;
 }
 
-/* Opcional: Flechita (Bocadillo) apuntando hacia la izquierda */
-.toast-validation::before {
+/* =========================================
+   CONTROLES ESTILO IOS (SWITCH & ICONS)
+   ========================================= */
+
+/* Contenedor de cada control */
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative; /* Para posicionar el toast */
+}
+
+/* Iconos de los controles */
+.control-icon {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+/* El Ojo se pone de colorines cuando está activo */
+.daltonic-mode-active .control-icon {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #a18cd1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+/* --- SWITCH (INTERRUPTOR) CSS --- */
+.ios-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+}
+
+.ios-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px; width: 20px;
+    left: 2px; bottom: 2px;
+    background-color: white;
+    transition: .4s cubic-bezier(0.34, 1.56, 0.64, 1); /* Efecto rebote Apple */
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+input:checked + .slider {
+    background-color: var(--brand-blue); /* Azul cuando activo */
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--brand-blue);
+}
+
+input:checked + .slider:before {
+    transform: translateX(16px);
+}
+
+/* --- MENSAJE BOCADILLO (TOAST) --- */
+.status-bubble {
+    position: absolute;
+    top: 140%; /* Debajo del control */
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+
+    background-color: rgba(30, 30, 30, 0.95);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 1050;
+    pointer-events: none;
+}
+
+/* Flechita del bocadillo */
+.status-bubble::after {
     content: '';
     position: absolute;
-    top: 50%;
-    left: -6px; /* Posiciona la flecha en el borde izquierdo */
-    transform: translateY(-50%);
-    border-width: 6px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
     border-style: solid;
-    border-color: transparent rgba(30, 30, 30, 0.95) transparent transparent; /* Pinta solo el triángulo izquierdo */
+    border-color: transparent transparent rgba(30, 30, 30, 0.95) transparent;
+}
+
+.status-bubble.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* --- ESTILO ICONO TEMA --- */
+
+/* Por defecto (SOL - Modo Claro) */
+.control-icon {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Color del SOL (Naranja Brillante) cuando está desactivado el modo oscuro */
+#themeIcon.bi-sun-fill {
+    color: #ff9500; /* Naranja sol */
+    filter: drop-shadow(0 0 5px rgba(255, 149, 0, 0.4));
+    transform: scale(1.1);
+}
+
+/* Color de la LUNA (Amarillo Pálido) cuando está activo el modo oscuro */
+.dark-mode-active #themeIcon.bi-moon-stars-fill {
+    color: #ffd60a; /* Amarillo luna */
+    filter: drop-shadow(0 0 8px rgba(255, 214, 10, 0.6)); /* Resplandor */
+    transform: scale(1.1) rotate(-15deg);
+}
+
+/* =========================================
+   ESTILOS DE ICONOS ACTIVOS (Sol, Luna, Ojo)
+   ========================================= */
+
+/* Transición suave de color */
+.control-icon {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* 1. SOL (Modo Claro) - Naranja brillante */
+.bi-sun-fill {
+    color: #ff9500;
+    filter: drop-shadow(0 2px 4px rgba(255, 149, 0, 0.3));
+    transform: scale(1.1);
+}
+
+/* 2. LUNA (Modo Oscuro) - Amarillo pálido */
+.dark-mode .bi-moon-stars-fill {
+    color: #ffd60a;
+    filter: drop-shadow(0 0 8px rgba(255, 214, 10, 0.5));
+    transform: scale(1.1) rotate(-10deg);
+}
+
+/* 3. OJO DALTÓNICO (Activado) - Multicolor */
+/* Se aplica cuando el JS añade la clase .daltonic-mode-active al contenedor */
+.daltonic-mode-active .bi-eye-fill {
+    background: linear-gradient(135deg, #ff0000, #00ff00, #0000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    transform: scale(1.2);
+}
+
+/* =========================================
+   NOTIFICACIÓN DE SISTEMA (iOS STYLE)
+   ========================================= */
+.sys-notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-150%); /* Oculto arriba */
+
+    background: rgba(20, 20, 20, 0.95); /* Negro profundo Apple */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    z-index: 99999; /* Por encima de TODO el universo */
+
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); /* Efecto rebote */
+    pointer-events: none;
+}
+
+.sys-notification i {
+    font-size: 1.1rem;
+}
+
+/* Estado Visible */
+.sys-notification.show {
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Adaptación en Modo Oscuro (Borde sutil) */
+.dark-mode .sys-notification {
+    background: rgba(50, 50, 50, 0.95);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* =========================================
+   MEJORA DE MENÚ MÓVIL (PREMIUM & GLASS)
+   ========================================= */
+
+@media (max-width: 991px) {
+    /* 1. Fondo del menú desplegable */
+    .navbar-collapse {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 0 0 24px 24px; /* Bordes redondeados abajo */
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        border-top: 1px solid rgba(0,0,0,0.05);
+
+        /* Animación de entrada */
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        pointer-events: none; /* Evita clicks cuando está oculto */
+        display: block !important; /* Sobrescribir bootstrap para animar */
+        visibility: hidden;
+    }
+
+    /* Cuando el menú está abierto (.show es la clase de Bootstrap) */
+    .navbar-collapse.show {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        visibility: visible;
+    }
+
+    /* 2. Enlaces del menú móvil (Más grandes y centrados) */
+    .ios-nav-link {
+        display: block;
+        text-align: center;
+        padding: 12px 0 !important;
+        margin: 5px 0;
+        font-size: 1.1rem;
+        border-radius: 12px;
+        background: rgba(0,0,0,0.02); /* Fondo sutil */
+    }
+
+    .ios-nav-link:active {
+        transform: scale(0.98);
+        background: rgba(0,0,0,0.05);
+    }
+
+    /* 3. Controles (Tema, Idioma) en móvil */
+    .theme-controls {
+        flex-direction: column; /* Apilar verticalmente */
+        gap: 15px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        margin-right: 0;
+    }
+
+    /* Selector de idioma más grande para tocar con el dedo */
+    #langSelector {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    /* Grupos de botones centrados */
+    .control-group {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    /* 4. Adaptación al Modo Oscuro */
+    .dark-mode .navbar-collapse {
+        background: rgba(30, 30, 30, 0.95);
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .dark-mode .ios-nav-link {
+        background: rgba(255,255,255,0.05);
+        color: #fff !important;
+    }
 }
